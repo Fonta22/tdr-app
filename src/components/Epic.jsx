@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const Epic = () => {
     const [image, setImage] = useState([]);
+    const [images, setImages] = useState([]);
     const [times, setTimes] = useState([]);
     const [date, setDate] = useState('');
     const [tds_, setTds] = useState([]);
@@ -40,8 +41,8 @@ const Epic = () => {
 
         setImage(images[0].image);
         
-        //setImages(images);
-        //setTimes(times);
+        setImages(images);
+        setTimes(times);
         //setDate(date);
 
         /*const finalData = {
@@ -95,7 +96,29 @@ const Epic = () => {
             <center>
                 <h1>Epic</h1>
                 <p>Earth Polychromatic Imaging Camera <b>{date}</b></p>
-                <img className="apod-picture" src={image} alt="img" />
+                <img src={image} alt="img" style={{height: 400, marginBottom: 30, alignSelf: 'center'}}/>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Time</th>
+                            <th scope="col">Latitude</th>
+                            <th scope="col">Longitude</th>
+                            <th scope="col">Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {images.map((e, i) => {
+                            return (
+                                <tr>
+                                    <th scope="row">{e.time}</th>
+                                    <td><code>{e.coords.lat}</code></td>
+                                    <td><code>{e.coords.lon}</code></td>
+                                    <td>{e.image.split('/').pop()}</td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
                 {/*<table>
                 <tbody>
                     <tr>
