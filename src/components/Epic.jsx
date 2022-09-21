@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 const Epic = () => {
-    const [images, setImages] = useState([]);
+    const [image, setImage] = useState([]);
     const [times, setTimes] = useState([]);
     const [date, setDate] = useState('');
     const [tds_, setTds] = useState([]);
@@ -37,10 +37,12 @@ const Epic = () => {
 
         console.log(images);
         console.log(times);
+
+        setImage(images[0].image);
         
-        setImages(images);
-        setTimes(times);
-        setDate(date);
+        //setImages(images);
+        //setTimes(times);
+        //setDate(date);
 
         /*const finalData = {
             images: images,
@@ -60,7 +62,7 @@ const Epic = () => {
     }*/
 
     useEffect(() => {
-        console.log('d')
+        //console.log('d')
         getData();
         //setIndex(0);
         //console.log(state);
@@ -68,11 +70,11 @@ const Epic = () => {
 
     //getData();
 
-    if (!images) return <pre>Images not loaded</pre>
+    //if (!images) return <pre>Images not loaded</pre>
 
     const tds = [];
 
-    for (let i = 0; i <= 2; i++) {
+    /*for (let i = 0; i <= 2; i++) {
         tds.push(
             <td>
                 <div className="card" >
@@ -86,18 +88,19 @@ const Epic = () => {
         )
         console.log(tds);
         setTds(tds);
-    }
+    }*/
 
     return (
         <div>
             <center>
                 <h1>Epic</h1>
                 <p>Earth Polychromatic Imaging Camera <b>{date}</b></p>
-                <table>
+                <img className="apod-picture" src={image} alt="img" />
+                {/*<table>
                 <tbody>
                     <tr>
-                        {/*tds_[0]*/}
-                        {/*<td>
+                        tds_[0]
+                        <td>
                             <div className="card" >
                                 <img className="card-img-top" id="rover-cam-img" src={images[0].image} alt="Card image cap" />
                                 <div className="card-body">
@@ -123,10 +126,10 @@ const Epic = () => {
                                     <p className="card-text">{images[2].coords.lat}, {images[2].coords.lon}</p>
                                 </div>
                             </div>
-    </td>*/}
+                        </td>
                     </tr>
                 </tbody>
-                </table>
+                </table>*/}
             </center>
         </div>
     );
