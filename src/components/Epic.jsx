@@ -4,10 +4,9 @@ import axios from 'axios';
 const Epic = () => {
     const [image, setImage] = useState([]);
     const [images, setImages] = useState([]);
-    const [times, setTimes] = useState([]);
+    const [time, setTime] = useState('Loading');
     const [date, setDate] = useState('');
-    const [tds_, setTds] = useState([]);
-    //const [index, setIndex] = useState(0);
+    const [coords, setCoords] = useState({});
 
     const url = 'https://epic.gsfc.nasa.gov/api/natural';
 
@@ -39,64 +38,26 @@ const Epic = () => {
         console.log(images);
         console.log(times);
 
-        setImage(images[0].image);
-        
+        setDate(date);
         setImages(images);
-        setTimes(times);
-        //setDate(date);
 
-        /*const finalData = {
-            images: images,
-            times: times,
-            date: date,
-            caption: caption
-        }*/
-
-        //setState(finalData);
-        //console.log(finalData);
+        setImage(images[0].image);
+        setTime(times[0]);
+        setCoords([ images[0].coords.lat, images[0].coords.lon ]);
     }
 
-    /*const spin = () => {
-        if (index >= state.images.length - 1) return setIndex(0)
-        setIndex(index + 1)
-        console.log(state, index);
-    }*/
-
     useEffect(() => {
-        //console.log('d')
         getData();
-        //setIndex(0);
-        //console.log(state);
     }, []);
-
-    //getData();
-
-    //if (!images) return <pre>Images not loaded</pre>
-
-    const tds = [];
-
-    /*for (let i = 0; i <= 2; i++) {
-        tds.push(
-            <td>
-                <div className="card" >
-                    <img className="card-img-top" id="rover-cam-img" src={images[i].image} alt="Card image cap" />
-                    <div className="card-body">
-                        <b className="card-text"><i class="bi bi-camera-fill"></i> {images[i].time}</b>
-                        <p className="card-text">{images[i].coords.lat}, {images[i].coords.lon}</p>
-                    </div>
-                </div>
-            </td>
-        )
-        console.log(tds);
-        setTds(tds);
-    }*/
 
     return (
         <div>
             <center>
                 <h1>Epic</h1>
                 <p>Earth Polychromatic Imaging Camera <b>{date}</b></p>
-                <img src={image} alt="img" style={{height: 400, marginBottom: 30, alignSelf: 'center'}}/>
+                <img src={image} alt="img" style={{width: 450, marginBottom: 20, alignSelf: 'center'}}/>
+                <p style={{ marginBottom: 30 }}><b>{time}</b> <code>{coords[0]}, {coords[1]}</code></p>
+
                 <table class="table table-dark table-striped">
                     <thead>
                         <tr>
@@ -104,6 +65,7 @@ const Epic = () => {
                             <th scope="col">Latitude</th>
                             <th scope="col">Longitude</th>
                             <th scope="col">Image</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -113,61 +75,23 @@ const Epic = () => {
                                     <th scope="row">{e.time}</th>
                                     <td><code>{e.coords.lat}</code></td>
                                     <td><code>{e.coords.lon}</code></td>
-                                    <td>{e.image.split('/').pop()}</td>
+                                    <td><img src={e.image} alt={i} style={{ height: 50 }} /></td>
+                                    {/*<td>{e.image.split('/').pop()}</td>*/}
+                                    <td><button className="btn btn-primary" onClick={() => {
+                                        //window.location.replace('/epic?selected=' + i);
+                                        setImage(e.image);
+                                        setTime(e.time);
+                                        setCoords([ e.coords.lat, e.coords.lon ])
+                                        console.log(images[i].image);
+                                    }}>View</button></td>
                                 </tr>
                             )
                         })}
                     </tbody>
                 </table>
-                {/*<table>
-                <tbody>
-                    <tr>
-                        tds_[0]
-                        <td>
-                            <div className="card" >
-                                <img className="card-img-top" id="rover-cam-img" src={images[0].image} alt="Card image cap" />
-                                <div className="card-body">
-                                    <b className="card-text"><i class="bi bi-camera-fill"></i> {images[0].time}</b>
-                                    <p className="card-text">{images[0].coords.lat}, {images[0].coords.lon}</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div className="card" >
-                                <img className="card-img-top" id="rover-cam-img" src={images[1].image} alt="Card image cap" />
-                                <div className="card-body">
-                                    <b className="card-text"><i class="bi bi-camera-fill"></i> {images[1].time}</b>
-                                    <p className="card-text">{images[1].coords.lat}, {images[1].coords.lon}</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div className="card" >
-                                <img className="card-img-top" id="rover-cam-img" src={images[2].image} alt="Card image cap" />
-                                <div className="card-body">
-                                    <b className="card-text"><i class="bi bi-camera-fill"></i> {images[2].time}</b>
-                                    <p className="card-text">{images[2].coords.lat}, {images[2].coords.lon}</p>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-                </table>*/}
             </center>
         </div>
     );
-    
-    /*return (
-        <div>
-            <center>
-                <h1>Epic</h1>
-                <p>Earth Polychromatic Imaging Camera <b>{state.date}</b></p>
-                <img className="epic-picture" src={state.images[index]} alt="ee" />
-                <br /><span>{index + 1}/{state.images.length}</span>
-                <br /><button className="btn btn-dark" onClick={spin}>spin</button>
-            </center>
-        </div>
-    );*/
 }
 
 export default Epic;
