@@ -77,3 +77,6 @@ img.flagicon {
 /*.rover-cam {
   height: 300px;
 }*/
+.hover-text {
+  border-bottom: 2px dotted;
+}
