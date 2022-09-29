@@ -83,6 +83,7 @@ const Epic = () => {
                                         setTime(e.time);
                                         setCoords([ e.coords.lat, e.coords.lon ])
                                         console.log(images[i].image);
+                                        document.body.scrollIntoView();
                                     }}>View</button></td>
                                 </tr>
                             )
