@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { getMapURL } from '../modules/getMapURL.js';
 
 const Epic = () => {
     const [image, setImage] = useState([]);
@@ -56,7 +57,7 @@ const Epic = () => {
                 <h1>Epic</h1>
                 <p>Earth Polychromatic Imaging Camera <b>{date}</b></p>
                 <img src={image} alt="img" style={{width: 450, marginBottom: 20, alignSelf: 'center'}}/>
-                <p style={{ marginBottom: 30 }}><b>{time}</b> <code>{coords[0]}, {coords[1]}</code></p>
+                <p style={{ marginBottom: 30 }}><b>{time}</b> <a href={getMapURL(coords[0], coords[1], 3)}><code>{coords[0]}, {coords[1]}</code></a></p>
 
                 <table class="table table-dark table-striped">
                     <thead>
