@@ -57,7 +57,27 @@ const Epic = () => {
                 <h1>Epic</h1>
                 <p>Earth Polychromatic Imaging Camera <b>{date}</b></p>
                 <img src={image} alt="img" style={{width: 450, marginBottom: 20, alignSelf: 'center'}}/>
-                <p style={{ marginBottom: 30 }}><b>{time}</b> <a href={getMapURL(coords[0], coords[1], 3)}><code>{coords[0]}, {coords[1]}</code></a></p>
+
+                <div style={{ marginBottom: 30 }}>
+                    <p>
+                        <b>{time}</b>
+                        <br />
+                        <code>{coords[0]}, {coords[1]}</code>
+                    </p>
+                    {/*<p>
+                        <b>{time}</b>
+                        <br />
+                        <br />
+                        <b>Latitude</b> : <code>{coords[0]}&deg;</code>
+                        <br />
+                        <b>Longitude</b> : <code>{coords[1]}&deg;</code>
+                    </p>*/}
+                    
+
+                    <button className="btn btn-secondary" onClick={() => window.location.href = getMapURL(coords[0], coords[1], 3)}><i class="bi bi-box-arrow-up-right" />&nbsp;&nbsp;Google Maps</button>
+                    {/*<a href={getMapURL(coords[0], coords[1], 3)}></a>*/}
+                    {/*onClick={() => window.open(getMapURL(coords[0], coords[1], 3))}*/}
+                </div>
 
                 <table class="table table-dark table-striped">
                     <thead>

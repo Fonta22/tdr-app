@@ -106,7 +106,7 @@ const Rover = () => {
                 <h2>Sol</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veniam quibusdam earum impedit officiis eum error sequi natus aliquam perferendis accusamus numquam totam vitae, dolore rerum praesentium distinctio repellendus consequuntur?</p>
             </div>*/}
-            <h2 style={{ marginTop: 20 }}>Photos from <span className="hover-text">sol</span> <code>{sol}</code>{/*<img src="https://cdn-icons-png.flaticon.com/512/447/447144.png" style={{ height: 25 }} alt="" />*/}</h2>
+            <h2 style={{ marginTop: 20 }}>Photos from <span title="One sol is a day in Mars." className="hover-text">sol</span> <code>{sol}</code>{/*<img src="https://cdn-icons-png.flaticon.com/512/447/447144.png" style={{ height: 25 }} alt="" />*/}</h2>
             <p style={{ marginBottom: 20 }}>This images were taken by the <b>Curiosity</b> Rover in Mars the day <b>{earthDate}</b>, Sol <b>{sol}</b>.</p>
             <table>
                 <tbody>
