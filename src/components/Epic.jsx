@@ -36,8 +36,8 @@ const Epic = () => {
             });
         }
 
-        console.log(images);
-        console.log(times);
+        //console.log(images);
+        //console.log(times);
 
         setDate(date);
         setImages(images);
@@ -74,12 +74,12 @@ const Epic = () => {
                     </p>*/}
                     
 
-                    <button className="btn btn-secondary" onClick={() => window.location.href = getMapURL(coords[0], coords[1], 3)}><i class="bi bi-box-arrow-up-right" />&nbsp;&nbsp;Google Maps</button>
+                    <button title="Click to see the location in Google Maps" className="btn btn-secondary" onClick={() => window.location.href = getMapURL(coords[0], coords[1], 3)}><i className="bi bi-box-arrow-up-right" />&nbsp;&nbsp;Google Maps</button>
                     {/*<a href={getMapURL(coords[0], coords[1], 3)}></a>*/}
                     {/*onClick={() => window.open(getMapURL(coords[0], coords[1], 3))}*/}
                 </div>
 
-                <table class="table table-dark table-striped">
+                <table className="table table-dark table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Time</th>
@@ -92,7 +92,7 @@ const Epic = () => {
                     <tbody>
                         {images.map((e, i) => {
                             return (
-                                <tr>
+                                <tr key={i}>
                                     <th scope="row">{e.time}</th>
                                     <td><code>{e.coords.lat}</code></td>
                                     <td><code>{e.coords.lon}</code></td>
