@@ -9,7 +9,9 @@ const Epic = () => {
     const [date, setDate] = useState('');
     const [coords, setCoords] = useState({});
 
-    const url = 'https://epic.gsfc.nasa.gov/api/natural';
+    const API_KEY = process.env.REACT_APP_API_KEY;
+
+    const url = `https://epic.gsfc.nasa.gov/api/natural?api_key=${API_KEY}`;
 
     const getData = async () => {
         const res = await axios.get(url);
