@@ -56,7 +56,7 @@ const Apod = () => {
                 <p>Astronomic Picture of the Day <b>{state.date}</b></p>
                 {
                     isImage ? <img className="apod-picture" src={state.url} alt={state.title} style={imgStyle} />
-                    : <ReactPlayer className="apod-picture" url={state.url} style={{ width: '25%' }} />
+                    : <ReactPlayer className="apod-picture" url={state.url} />
                 }
                 {
                     isImage ? <p><a href={state.hdurl} className="btn btn-outline-primary">Download HD</a>&nbsp;&nbsp;&nbsp;&copy; {state.copyright || 'NASA'} 2022</p>
