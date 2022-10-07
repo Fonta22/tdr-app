@@ -4,6 +4,7 @@ import { getMonthName, monthNames } from '../modules/getMonthName';
 import { daysInMonth } from '../modules/daysInMonth';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 
 const Calendar = () => {
     const [images, setImages] = useState([]);
@@ -12,6 +13,9 @@ const Calendar = () => {
     const [staticYear, setStaticYear] = useState('');
     const [monthName, setMonthName] = useState('');
     const [selected, setSelected] = useState('');
+
+    const [inpStyle, setInpStyle] = useState({});
+    const [selStyle, setSelStyle] = useState({});
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -44,7 +48,6 @@ const Calendar = () => {
 
         async function getData() {
             let year = new URLSearchParams(location.search).get('year');
-            //const month = 10;
             let month = new URLSearchParams(location.search).get('month');
             console.log(year);
 
@@ -73,6 +76,14 @@ const Calendar = () => {
             setMonthName(getMonthName(month));
             setImages(imageArr);
             setDates(dateArr);
+
+            if (isMobile) {
+                setInpStyle({ width: '100%'  });
+                setSelStyle({ width: 'auto' });
+            } else {
+                setInpStyle({ width: 500 });
+                setSelStyle({ width: 400 });
+            }
         }
     }, []);
 
@@ -81,7 +92,7 @@ const Calendar = () => {
             <center>
                 <h1>Calendar</h1>
                 <p>Calendar from <b>{monthName} {staticYear}</b></p>
-                <div style={/*{ marginLeft: 450, marginRight: 450 }*/ { width: 300 }}>
+                <div style={{ width: 300 }}>
                     {images.map((e, i) => {
                         return (
                             <Link to={'/apod?date=' + dates[i]}><img src={e} alt={i + 1} className="resize" style={{ width: 60, height: 60 }}/></Link>
@@ -91,9 +102,9 @@ const Calendar = () => {
                 <br />
                 <br />
                 
-                <div class="input-group mb-3" style={{ width: 500 }}>
-                    <label class="input-group-text" for="inputGroupSelect01" style={{ width: 100 }}>Month</label>
-                    <select class="form-select" id="inputGroupSelect01" onChange={e => updateMonth(e)} style={{ width: 400 }}>
+                <div class="input-group mb-3" style={inpStyle}>
+                    <span class="input-group-text" for="inputGroupSelect01" style={{ width: 100 }}>Month</span>
+                    <select class="form-select" id="inputGroupSelect01" onChange={e => updateMonth(e)} style={selStyle}>
                         <option selected>Select Month...</option>
                         {/*monthNames.map((name, num) => {
                             console.log(name, num + 1);
@@ -114,7 +125,7 @@ const Calendar = () => {
                     </select>
                 </div>
 
-                <div class="input-group mb-3" style={{ width: 500 }}>
+                <div class="input-group mb-3" style={inpStyle}>
                     <span class="input-group-text" id="basic-addon1" style={{ width: 100 }}>Year</span>
                     <input onChange={handleInput} type="text" class="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" />
                 </div>
@@ -124,12 +135,6 @@ const Calendar = () => {
                     if (selected === '') window.location.replace('/calendar');
                     else window.location.replace('/calendar?month=' + selected + '&year=' + year);
                 }}>Submit</button>
-
-                {/*<div class="input-group mb-3" style={{ width: 500 }}>
-                    <span class="input-group-text" id="basic-addon1">Year&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <input type="text" class="form-control" placeholder="Year" />
-                </div>*/}
-
             </center>
         </div>
     );
