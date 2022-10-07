@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { getMapURL } from '../modules/getMapURL.js';
+import { isMobile } from "react-device-detect";
 
 const Epic = () => {
     const [image, setImage] = useState([]);
@@ -58,8 +59,10 @@ const Epic = () => {
             <center>
                 <h1>Epic</h1>
                 <p>Earth Polychromatic Imaging Camera <b>{date}</b></p>
-                <img src={image} alt="img" style={{width: 450, marginBottom: 20, alignSelf: 'center'}}/>
-
+                {
+                    isMobile ? <img src={image} alt="img" style={{ width: '100%', marginBottom: 20, alignSelf: 'center' }}/>
+                    : <img src={image} alt="img" style={{ width: 450, marginBottom: 20, alignSelf: 'center' }}/>
+                }
                 <div style={{ marginBottom: 30 }}>
                     <p>
                         <b>{time}</b>
