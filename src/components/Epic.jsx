@@ -39,9 +39,6 @@ const Epic = () => {
             });
         }
 
-        //console.log(images);
-        //console.log(times);
-
         setDate(date);
         setImages(images);
 
@@ -69,18 +66,7 @@ const Epic = () => {
                         <br />
                         <code>{coords[0]}, {coords[1]}</code>
                     </p>
-                    {/*<p>
-                        <b>{time}</b>
-                        <br />
-                        <br />
-                        <b>Latitude</b> : <code>{coords[0]}&deg;</code>
-                        <br />
-                        <b>Longitude</b> : <code>{coords[1]}&deg;</code>
-                    </p>*/}
-
                     <button title="Click to see the location in Google Maps" className="btn btn-secondary" onClick={() => window.location.href = getMapURL(coords[0], coords[1], 3)}><i className="bi bi-box-arrow-up-right" />&nbsp;&nbsp;Google Maps</button>
-                    {/*<a href={getMapURL(coords[0], coords[1], 3)}></a>*/}
-                    {/*onClick={() => window.open(getMapURL(coords[0], coords[1], 3))}*/}
                 </div>
 
                 <table className="table table-dark table-striped">
@@ -101,9 +87,7 @@ const Epic = () => {
                                     <td><code>{e.coords.lat}</code></td>
                                     <td><code>{e.coords.lon}</code></td>
                                     <td><img src={e.image} alt={i} style={{ height: 50 }} /></td>
-                                    {/*<td>{e.image.split('/').pop()}</td>*/}
                                     <td><button className="btn btn-primary" onClick={() => {
-                                        //window.location.replace('/epic?selected=' + i);
                                         setImage(e.image);
                                         setTime(e.time);
                                         setCoords([ e.coords.lat, e.coords.lon ])
