@@ -74,7 +74,6 @@ const Epic = () => {
                         <br />
                         <b>Longitude</b> : <code>{coords[1]}&deg;</code>
                     </p>*/}
-                    
 
                     <button title="Click to see the location in Google Maps" className="btn btn-secondary" onClick={() => window.location.href = getMapURL(coords[0], coords[1], 3)}><i className="bi bi-box-arrow-up-right" />&nbsp;&nbsp;Google Maps</button>
                     {/*<a href={getMapURL(coords[0], coords[1], 3)}></a>*/}

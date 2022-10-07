@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { formatDate } from '../modules/formatDate';
 import { translateText } from '../modules/translateText';
+import { isMobile } from 'react-device-detect';
 
 /**
  * app/.env
@@ -14,6 +15,7 @@ const Apod = () => {
     const [state, setState] = useState([]);
     const [isImage, setIsImage] = useState([]);
     const [isYouTube, setIsYouTube] = useState([]);
+    const [imgStyle, setImgStyle] = useState({});
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -38,8 +40,12 @@ const Apod = () => {
             } else {
                 setIsImage(false); setIsYouTube(false);
             }
-                /*setIsYouTube(true);
-            } else if (data.url.startsWith('https://www.youtube.com/'))*/
+
+            if (isMobile) {
+                setImgStyle({ width: '100%', height: 'auto' });
+            } else {
+                setImgStyle({ width: '60%', height: 'auto' });
+            }
         }
     }, []);
 
@@ -49,8 +55,8 @@ const Apod = () => {
                 <h1>Apod</h1>
                 <p>Astronomic Picture of the Day <b>{state.date}</b></p>
                 {
-                    isImage ? <img className="apod-picture" src={state.url} alt={state.title} />
-                    : <ReactPlayer className="apod-picture" url={state.url} />
+                    isImage ? <img className="apod-picture" src={state.url} alt={state.title} style={imgStyle} />
+                    : <ReactPlayer className="apod-picture" url={state.url} style={{ width: '25%' }} />
                 }
                 {
                     isImage ? <p><a href={state.hdurl} className="btn btn-outline-primary">Download HD</a>&nbsp;&nbsp;&nbsp;&copy; {state.copyright || 'NASA'} 2022</p>
