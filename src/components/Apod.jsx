@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import { formatDate } from '../modules/formatDate';
@@ -28,8 +29,8 @@ const Apod = () => {
             let date = new URLSearchParams(location.search).get('date');
             if (date === null) date = '';
 
-            const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`); // date=YYYY-MM-DD
-            const data = await res.json();
+            const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`); // date=YYYY-MM-DD
+            const data = await res.data;
             data.date = formatDate(data.date);
             data.explanation_cat = await translateText(data.explanation);
             setState(data);

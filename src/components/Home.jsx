@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { getThumb } from '../modules/getThumbnail';
 import { isMobile } from "react-device-detect";
 
 const Home = () => {
-    const [apod, setApod] = useState("https://th.bing.com/th/id/R.2eb1c28e60e9f2648d1d0105b4059c09?rik=ZvX666QnPjiUvw&riu=http%3a%2f%2ftlap.com%2fwp-content%2fuploads%2f2011%2f05%2fblack-1024x576.png&ehk=YJs4rpnHZOCJGbOI1Z1t6AmmFFrJmHRlCg3bU3VLPrk%3d&risl=&pid=ImgRaw&r=0");
+    const [apod, setApod] = useState('');
     const [calendarImg, setCalendarImg] = useState();
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
     const getApod = async () => {
-        const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
-        const data = await res.json();
+        const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
+        const data = await res.data;
 
         if (data.url.startsWith('https://apod.nasa.gov/')) setApod(data.url);
         else if (data.url.startsWith('https://www.youtube.com/')) setApod(getThumb(data.url));
@@ -27,8 +28,8 @@ const Home = () => {
 
         const fullDate = `${currentYear}-${currentMonth}-01`;
 
-        const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${fullDate}`);
-        const data = await res.json();
+        const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${fullDate}`);
+        const data = await res;
         setCalendarImg(data.url);
     }
 
@@ -49,7 +50,7 @@ const Home = () => {
                             <tr>
                                 <td>
                                     <div className="card">
-                                        <img src={apod} className="card-img-top" alt="..." />
+                                        <img src={apod} className="card-img-top" alt="Astronomy Picture of the Day" />
                                         <div className="card-body">
                                             <h5 className="card-title">Apod</h5>
                                             <p className="card-text">Astronomy Picture of the Day</p>

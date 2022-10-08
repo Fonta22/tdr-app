@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { getThumb } from '../modules/getThumbnail';
 import { getMonthName, monthNames } from '../modules/getMonthName';
 import { daysInMonth } from '../modules/daysInMonth';
@@ -58,8 +59,8 @@ const Calendar = () => {
 
             if (month === currentMonth) days = today;
 
-            const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01&end_date=${year}-${month}-${days}`); // date=YYYY-MM-DD
-            const data = await res.json();
+            const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01&end_date=${year}-${month}-${days}`); // date=YYYY-MM-DD
+            const data = await res.data;
 
             const imageArr = [];
             const dateArr = [];
