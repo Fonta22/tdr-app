@@ -62,9 +62,9 @@ const Apod = () => {
                     : <ReactPlayer className="apod-picture" url={state.url} />
                 }
                 {
-                    isImage ? <p><a href={state.hdurl} className="btn btn-outline-primary">Download HD</a>&nbsp;&nbsp;&nbsp;&copy; {state.copyright || 'NASA'} 2022</p>
-                    : isYouTube ? <p><a href={state.url} className="btn btn-outline-primary">View in YouTube</a>&nbsp;&nbsp;&nbsp;&copy; {state.copyright || 'NASA'} 2022</p>
-                    : <p><a href={state.url} className="btn btn-outline-primary">View in Vimeo</a>&nbsp;&nbsp;&nbsp;&copy; {state.copyright || 'NASA'} 2022</p>
+                    isImage ? <p><a href={state.hdurl} className="btn btn-outline-primary">Download HD</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
+                    : isYouTube ? <p><a href={state.url} className="btn btn-outline-primary">View in YouTube</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
+                    : <p><a href={state.url} className="btn btn-outline-primary">View in Vimeo</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
                 }
             </center>
             
