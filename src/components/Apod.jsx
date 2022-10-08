@@ -66,12 +66,15 @@ const Apod = () => {
                     : isYouTube ? <p><a href={state.url} className="btn btn-outline-primary">View in YouTube</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
                     : <p><a href={state.url} className="btn btn-outline-primary">View in Vimeo</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
                 }
+                <br />
             </center>
             
             <h2>{state.title}</h2>
-            
             <p>{state.explanation}</p>
-            <p style={{ color: '#808080' }}><img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;&nbsp;<i>{state.explanation_cat}</i></p>
+            <p style={{ color: '#808080' }}>
+                <img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;&nbsp;
+                <i>{state.explanation_cat}</i>
+            </p>
             
             <br />
             <br />

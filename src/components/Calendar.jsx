@@ -17,10 +17,10 @@ const Calendar = () => {
     const [monthName, setMonthName] = useState('');
     const [selected, setSelected] = useState('');
 
-    const [inpStyle, setInpStyle] = useState({});
-    const [selStyle, setSelStyle] = useState({});
+    const [inpStyle, setInpStyle] = useState({ width: 500 });
+    const [selStyle, setSelStyle] = useState({ width: 400 });
 
-    const [error, setError] = useState(<img src={Rolling} style={{ height: 100 }} />);
+    const [error, setError] = useState(<img src={Rolling} style={{ height: 100, marginTop: '1rem' }} />);
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -52,6 +52,14 @@ const Calendar = () => {
         getData();
 
         async function getData() {
+            if (isMobile) {
+                setInpStyle({ width: '100%'  });
+                setSelStyle({ width: 'auto' });
+            } else {
+                setInpStyle({ width: 500 });
+                setSelStyle({ width: 400 });
+            }
+
             let year = new URLSearchParams(location.search).get('year');
             let month = new URLSearchParams(location.search).get('month');
             console.log(year);
@@ -85,14 +93,6 @@ const Calendar = () => {
                 setError('');
             } catch (err) {
                 setError(err.code);
-            }
-
-            if (isMobile) {
-                setInpStyle({ width: '100%'  });
-                setSelStyle({ width: 'auto' });
-            } else {
-                setInpStyle({ width: 500 });
-                setSelStyle({ width: 400 });
             }
         }
     }, []);
@@ -146,6 +146,8 @@ const Calendar = () => {
                     if (selected === '') window.location.replace('/calendar');
                     else window.location.replace('/calendar?month=' + selected + '&year=' + year);
                 }}>Submit</button>
+                <br />
+                <br />
             </center>
         </div>
     );
