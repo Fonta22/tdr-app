@@ -20,7 +20,7 @@ const Calendar = () => {
     const [inpStyle, setInpStyle] = useState({ width: 500 });
     const [selStyle, setSelStyle] = useState({ width: 400 });
 
-    const [error, setError] = useState(<img src={Rolling} style={{ height: 100, marginTop: '1rem' }} />);
+    const [status, setStatus] = useState(<img src={Rolling} style={{ height: 100, marginTop: '1rem' }} />);
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -90,9 +90,9 @@ const Calendar = () => {
                 setMonthName(getMonthName(month));
                 setImages(imageArr);
                 setDates(dateArr);
-                setError('');
+                setStatus('');
             } catch (err) {
-                setError(err.code);
+                setStatus(<code>{err.code}</code>);
             }
         }
     }, []);
@@ -102,7 +102,7 @@ const Calendar = () => {
             <center>
                 <h1>Calendar</h1>
                 <p>Calendar from <b>{monthName} {staticYear}</b></p>
-                {error}
+                {status}
                 <div style={{ width: 300 }}>
                     {images.map((e, i) => {
                         return (
@@ -113,14 +113,10 @@ const Calendar = () => {
                 <br />
                 <br />
                 
-                <div class="input-group mb-3" style={inpStyle}>
-                    <span class="input-group-text" for="inputGroupSelect01" style={{ width: 100 }}>Month</span>
-                    <select class="form-select" id="inputGroupSelect01" onChange={e => updateMonth(e)} style={selStyle}>
-                        <option selected>Select Month...</option>
-                        {/*monthNames.map((name, num) => {
-                            console.log(name, num + 1);
-                            <option value={num + 1}>{name}</option>
-                        })*/}
+                <div className="input-group mb-3" style={inpStyle}>
+                    <span className="input-group-text" htmlFor="inputGroupSelect01" style={{ width: 100 }}>Month</span>
+                    <select className="form-select" id="inputGroupSelect01" defaultValue="Select Month..." onChange={e => updateMonth(e)} style={selStyle}>
+                        <option>Select Month...</option>
                         <option value="1">January</option>
                         <option value="2">February</option>
                         <option value="3">March</option>
@@ -136,9 +132,9 @@ const Calendar = () => {
                     </select>
                 </div>
 
-                <div class="input-group mb-3" style={inpStyle}>
-                    <span class="input-group-text" id="basic-addon1" style={{ width: 100 }}>Year</span>
-                    <input onChange={handleInput} type="number" class="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" />
+                <div className="input-group mb-3" style={inpStyle}>
+                    <span className="input-group-text" id="basic-addon1" style={{ width: 100 }}>Year</span>
+                    <input onChange={handleInput} type="number" className="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" />
                 </div>
 
                 <br />
