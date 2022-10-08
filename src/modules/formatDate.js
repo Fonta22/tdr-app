@@ -1,5 +1,8 @@
-// YYYY-MM-DD
-
+/**
+ * 
+ * @param {string} date Date in YYYY-MM-DD format
+ * @returns {string} Date in DD/MM/YYYY format
+ */
 export function formatDate(date) {
     const dateArr = date.split('-');
 
