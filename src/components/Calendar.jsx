@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 
+import Rolling from '../img/Rolling.svg';
+
 const Calendar = () => {
     const [images, setImages] = useState([]);
     const [dates, setDates] = useState([]);
@@ -17,6 +19,8 @@ const Calendar = () => {
 
     const [inpStyle, setInpStyle] = useState({});
     const [selStyle, setSelStyle] = useState({});
+
+    const [error, setError] = useState(<img src={Rolling} style={{ height: 100 }} />);
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -59,24 +63,29 @@ const Calendar = () => {
 
             if (month === currentMonth) days = today;
 
-            const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01&end_date=${year}-${month}-${days}`); // date=YYYY-MM-DD
-            const data = await res.data;
+            try {
+                const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01&end_date=${year}-${month}-${days}`); // date=YYYY-MM-DD
+                const data = await res.data;
 
-            const imageArr = [];
-            const dateArr = [];
+                const imageArr = [];
+                const dateArr = [];
 
-            data.map(e => {
-                if (e.url.startsWith('https://apod.nasa.gov/')) imageArr.push(e.url);
-                else if (e.url.startsWith('https://www.youtube.com/')) imageArr.push(getThumb(e.url));
+                data.map(e => {
+                    if (e.url.startsWith('https://apod.nasa.gov/')) imageArr.push(e.url);
+                    else if (e.url.startsWith('https://www.youtube.com/')) imageArr.push(getThumb(e.url));
 
-                dateArr.push(e.date);
-            });
+                    dateArr.push(e.date);
+                });
 
-            setStaticYear(year.toString());
-            setYear(year);
-            setMonthName(getMonthName(month));
-            setImages(imageArr);
-            setDates(dateArr);
+                setStaticYear(year.toString());
+                setYear(year);
+                setMonthName(getMonthName(month));
+                setImages(imageArr);
+                setDates(dateArr);
+                setError('');
+            } catch (err) {
+                setError(err.code);
+            }
 
             if (isMobile) {
                 setInpStyle({ width: '100%'  });
@@ -93,6 +102,7 @@ const Calendar = () => {
             <center>
                 <h1>Calendar</h1>
                 <p>Calendar from <b>{monthName} {staticYear}</b></p>
+                {error}
                 <div style={{ width: 300 }}>
                     {images.map((e, i) => {
                         return (
