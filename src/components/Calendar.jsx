@@ -116,19 +116,10 @@ const Calendar = () => {
                 <div className="input-group mb-3" style={inpStyle}>
                     <span className="input-group-text" htmlFor="inputGroupSelect01" style={{ width: 100 }}>Month</span>
                     <select className="form-select" id="inputGroupSelect01" defaultValue="Select Month..." onChange={e => updateMonth(e)} style={selStyle}>
-                        <option>Select Month...</option>
-                        <option value="1">January</option>
-                        <option value="2">February</option>
-                        <option value="3">March</option>
-                        <option value="4">April</option>
-                        <option value="5">May</option>
-                        <option value="6">June</option>
-                        <option value="7">July</option>
-                        <option value="8">August</option>
-                        <option value="9">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
+                        <option key="0">Select Month...</option>
+                        {monthNames.map((month, i) => {
+                            return <option value={i + 1} key={i + 1}>{month}</option>
+                        })}
                     </select>
                 </div>
 
