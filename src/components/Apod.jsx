@@ -34,11 +34,13 @@ const Apod = () => {
             data.explanation_cat = await translateText(data.explanation);
             setState(data);
 
-            if (data.url.startsWith('https://apod.nasa.gov/')) setIsImage(true);
-            else if (data.url.startsWith('https://www.youtube.com/')) {
-                setIsImage(false); setIsYouTube(true);
-            } else {
-                setIsImage(false); setIsYouTube(false);
+            console.log(data.media_type);
+
+            if (data.media_type === 'image') setIsImage(true);
+            else {
+                setIsImage(false);
+                if (data.url.startsWith('https://www.youtube.com/')) setIsYouTube(true);
+                else setIsYouTube(false);
             }
 
             if (isMobile) {
@@ -53,7 +55,7 @@ const Apod = () => {
         <div>
             <center>
                 <h1>Apod</h1>
-                <p>Astronomic Picture of the Day <b>{state.date}</b></p>
+                <p>Astronomy Picture of the Day <b>{state.date}</b></p>
                 {
                     isImage ? <img className="apod-picture" src={state.url} alt={state.title} style={imgStyle} />
                     : <ReactPlayer className="apod-picture" url={state.url} />
@@ -68,7 +70,7 @@ const Apod = () => {
             <h2>{state.title}</h2>
             
             <p>{state.explanation}</p>
-            <p style={{ color: '#808080' }}><img class="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;&nbsp;<i>{state.explanation_cat}</i></p>
+            <p style={{ color: '#808080' }}><img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;&nbsp;<i>{state.explanation_cat}</i></p>
             
             <br />
             <br />

@@ -52,7 +52,7 @@ const Home = () => {
                                         <img src={apod} className="card-img-top" alt="..." />
                                         <div className="card-body">
                                             <h5 className="card-title">Apod</h5>
-                                            <p className="card-text">Astronomic Picture of the Day</p>
+                                            <p className="card-text">Astronomy Picture of the Day</p>
                                             <Link to="/apod" className="btn btn-primary">Visit</Link>
                                         </div>
                                     </div>
