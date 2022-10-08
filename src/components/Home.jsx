@@ -29,7 +29,7 @@ const Home = () => {
         const fullDate = `${currentYear}-${currentMonth}-01`;
 
         const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${fullDate}`);
-        const data = await res;
+        const data = await res.data;
         setCalendarImg(data.url);
     }
 
