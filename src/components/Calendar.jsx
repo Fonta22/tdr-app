@@ -128,7 +128,7 @@ const Calendar = () => {
 
                 <div class="input-group mb-3" style={inpStyle}>
                     <span class="input-group-text" id="basic-addon1" style={{ width: 100 }}>Year</span>
-                    <input onChange={handleInput} type="text" class="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" />
+                    <input onChange={handleInput} type="number" class="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" />
                 </div>
 
                 <br />
