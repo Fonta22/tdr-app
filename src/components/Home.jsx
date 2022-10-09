@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { getThumb } from '../modules/getThumbnail';
+import { getThumb } from '../modules/getThumbnail.ts';
 import { isMobile } from "react-device-detect";
 
 const Home = () => {

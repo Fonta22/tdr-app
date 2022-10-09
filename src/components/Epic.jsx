@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import { getMapURL } from '../modules/getMapURL.js';
+import { getMapURL } from '../modules/getMapURL.ts';
 import { isMobile } from "react-device-detect";
 
 const Epic = () => {

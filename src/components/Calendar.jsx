@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { getThumb } from '../modules/getThumbnail';
-import { getMonthName, monthNames } from '../modules/getMonthName';
-import { daysInMonth } from '../modules/daysInMonth';
+import { getThumb } from '../modules/getThumbnail.ts';
+import { getMonthName, monthNames } from '../modules/getMonthName.ts';
+import { daysInMonth } from '../modules/daysInMonth.ts';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';

@@ -1,7 +1,7 @@
 /**
  * Array with all the names of the 12 months.
  */
-export const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
+export const monthNames: string[] = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
 
 /**
  * Returns the name of the month from the given number of the month.
@@ -9,6 +9,6 @@ export const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'Jun
  * @param {number} i Number of the month
  * @returns {string} Name of the month
  */
-export function getMonthName(i) {
+export function getMonthName(i: number): string {
     return monthNames[i - 1];
 }

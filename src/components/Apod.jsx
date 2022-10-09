@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player';
-import { formatDate } from '../modules/formatDate';
-import { translateText } from '../modules/translateText';
+import { formatDate } from '../modules/formatDate.ts';
+import { translateText } from '../modules/translateText.ts';
 import { isMobile } from 'react-device-detect';
 
 /**

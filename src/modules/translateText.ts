@@ -6,8 +6,8 @@ import translate from 'translate';
  * @param {string} text Text in any langauge
  * @returns {string} Text translated to Catalan
  */
-export async function translateText(text) {
+export async function translateText(text: string): Promise<string> {
     translate.engine = 'google';
-    const cat = await translate(text, { to: "ca" });
+    const cat: Promise<string> = await translate(text, { to: "ca" });
     return cat;
 }

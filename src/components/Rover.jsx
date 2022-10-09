@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import { formatDate } from '../modules/formatDate';
+import { formatDate } from '../modules/formatDate.ts';
 import { isMobile } from "react-device-detect";
 
 
