@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { getThumb } from '../modules/getThumbnail.ts';
+import { getThumbnail } from '../modules/getThumbnail.ts';
 import { isMobile } from "react-device-detect";
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
         const data = await res.data;
 
         if (data.url.startsWith('https://apod.nasa.gov/')) setApod(data.url);
-        else if (data.url.startsWith('https://www.youtube.com/')) setApod(getThumb(data.url));
+        else if (data.url.startsWith('https://www.youtube.com/')) setApod(getThumbnail(data.url));
     }
 
     const getCalendarImg = async () => {

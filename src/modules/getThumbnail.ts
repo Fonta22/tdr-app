@@ -4,7 +4,7 @@
  * @param {string} url URL of the YouTube video
  * @returns {string} URL of the thumbnail of the YouTube video
  */
-export function getThumb(url: any): any {
+export function getThumbnail(url: any): any {
     const type: string = url.split('/')[3].split('?')[0];
 
     if (type === 'embed') {

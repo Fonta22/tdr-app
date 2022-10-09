@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { getThumb } from '../modules/getThumbnail.ts';
+import { getThumbnail } from '../modules/getThumbnail.ts';
 import { getMonthName, monthNames } from '../modules/getMonthName.ts';
 import { daysInMonth } from '../modules/daysInMonth.ts';
 import { Link } from 'react-router-dom';
@@ -80,7 +80,7 @@ const Calendar = () => {
 
                 data.map(e => {
                     if (e.url.startsWith('https://apod.nasa.gov/')) imageArr.push(e.url);
-                    else if (e.url.startsWith('https://www.youtube.com/')) imageArr.push(getThumb(e.url));
+                    else if (e.url.startsWith('https://www.youtube.com/')) imageArr.push(getThumbnail(e.url));
 
                     dateArr.push(e.date);
                 });
