@@ -20,11 +20,11 @@ function App() {
           <Link to="/" className="navbar-brand"><img src={logo} alt='NASA Logo' className="brand"></img></Link>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link to="/" className="nav-link">Home</Link>
-              <Link to="/apod" className="nav-link">Apod</Link>
-              <Link to="/epic" className="nav-link">Epic</Link>
-              <Link to="/rover" className="nav-link">Rover</Link>
-              <Link to="/calendar" className="nav-link">Calendar</Link>
+              <Link to="/" className="nav-link" id="home-link">Home</Link>
+              <Link to="/apod" className="nav-link" id="apod-link">Apod</Link>
+              <Link to="/epic" className="nav-link" id="epic-link">Epic</Link>
+              <Link to="/rover" className="nav-link" id="rover-link">Rover</Link>
+              <Link to="/calendar" className="nav-link" id="calendar-link">Calendar</Link>
             </div>
           </div>
         </div>
