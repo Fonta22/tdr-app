@@ -5,12 +5,12 @@ export function getThumb(url) {
 
     if (type === 'embed') {
         const vi = url.split('/').pop().split('?')[0];
-        const thumb = 'http://img.youtube.com/vi/' + vi + '/0.jpg';
+        const thumb = 'https://img.youtube.com/vi/' + vi + '/0.jpg';
         return thumb;
     }
     else if (type === 'watch') {
         const vi = url.split('/').pop().split('?v=').pop();
-        const thumb = 'http://img.youtube.com/vi/' + vi + '/0.jpg';
+        const thumb = 'https://img.youtube.com/vi/' + vi + '/0.jpg';
         return thumb;
     }
 }
