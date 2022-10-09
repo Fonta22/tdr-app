@@ -3,20 +3,23 @@ import axios from 'axios';
 import { formatDate } from '../modules/formatDate.ts';
 import { isMobile } from "react-device-detect";
 
+import cameraOff from '../img/camera-off.png';
+import white from '../img/white.png';
+import black from '../img/black.png';
 
 const Rover = () => {
-    const black = "https://th.bing.com/th/id/R.2eb1c28e60e9f2648d1d0105b4059c09?rik=ZvX666QnPjiUvw&riu=http%3a%2f%2ftlap.com%2fwp-content%2fuploads%2f2011%2f05%2fblack-1024x576.png&ehk=YJs4rpnHZOCJGbOI1Z1t6AmmFFrJmHRlCg3bU3VLPrk%3d&risl=&pid=ImgRaw&r=0";
+    const background = white;
     
     const [sol, setSol] = useState(100);
 
     // Cams
-    const [FHAZ, setFHAZ] = useState(black);
-    const [RHAZ, setRHAZ] = useState(black);
-    const [MAST, setMAST] = useState(black);
-    const [CHEMCAM, setCHEMCAM] = useState(black);
-    const [MAHLI, setMAHLI] = useState(black);
-    const [MARDI, setMARDI] = useState(black);
-    const [NAVCAM, setNAVCAM] = useState(black);
+    const [FHAZ, setFHAZ] = useState(background);
+    const [RHAZ, setRHAZ] = useState(background);
+    const [MAST, setMAST] = useState(background);
+    const [CHEMCAM, setCHEMCAM] = useState(background);
+    const [MAHLI, setMAHLI] = useState(background);
+    const [MARDI, setMARDI] = useState(background);
+    const [NAVCAM, setNAVCAM] = useState(background);
     
     const [earthDate, setEarthDate] = useState('');
 
@@ -34,7 +37,7 @@ const Rover = () => {
             if (i.camera.name === target) arr.push(i);
         });
 
-        if (arr.length === 0) return black;
+        if (arr.length === 0) return cameraOff;
         else return arr[0].img_src;
     }
 
