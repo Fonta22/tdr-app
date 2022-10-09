@@ -1,8 +1,8 @@
 /**
  * Returns the days of the specified month.
  * 
- * @param {number} month
- * @param {number} year
+ * @param {number} month Month number
+ * @param {number} year Year
  * @returns {number} The days of the specified month
  */
 export function daysInMonth(month, year) {

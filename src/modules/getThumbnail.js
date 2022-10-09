@@ -1,5 +1,9 @@
-// https://www.youtube.com/embed/ts0Ek3nLHew?rel=0
-
+/**
+ * Returns the thumbnail of the specified YouTube video.
+ * 
+ * @param {string} url URL of the YouTube video
+ * @returns {string} URL of the thumbnail of the YouTube video
+ */
 export function getThumb(url) {
     const type = url.split('/')[3].split('?')[0];
 
