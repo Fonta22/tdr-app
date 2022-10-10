@@ -20,7 +20,7 @@ const Home = () => {
     }
     
     const getEpicImg = async () => {
-        const response = await axios.get(url);
+        const response = await axios.get('https://epic.gsfc.nasa.gov/api/natural?api_key=${API_KEY}');
         const data = await response.data;
 
         // common variables
