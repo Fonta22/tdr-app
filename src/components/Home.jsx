@@ -6,7 +6,8 @@ import { isMobile } from "react-device-detect";
 
 const Home = () => {
     const [apod, setApod] = useState('');
-    const [calendarImg, setCalendarImg] = useState();
+    const [calendarImg, setCalendarImg] = useState('');
+    const [epicImg, setEpicImg] = useState('');
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -17,7 +18,27 @@ const Home = () => {
         if (data.url.startsWith('https://apod.nasa.gov/')) setApod(data.url);
         else if (data.url.startsWith('https://www.youtube.com/')) setApod(getThumbnail(data.url));
     }
+    
+    const getEpicImg = async () => {
+        const response = await axios.get(url);
+        const data = await response.data;
 
+        // common variables
+        const date = data[0].date.split(' ')[0].replaceAll('-', '/');
+        const image = `https://epic.gsfc.nasa.gov/archive/natural/${date}/png/${data[0].image}.png`
+        setEpicImg(image);
+    }
+
+    /*async function epic() {
+        const response = await axios.get(url);
+        const data = await response.data;
+
+        // common variables
+        const date = data[0].date.split(' ')[0].replaceAll('-', '/');
+        const image = `https://epic.gsfc.nasa.gov/archive/natural/${date}/png/${data[0].image}.png`
+        return image;
+    }*/
+    
     const getCalendarImg = async () => {
         const date = new Date();
         const currentYear = date.getFullYear();
@@ -37,6 +58,7 @@ const Home = () => {
         console.log('yus iFEKT!!');
         getApod();
         getCalendarImg();
+        getEpicImg();
     }, []);
 
     if (!isMobile) {
@@ -60,7 +82,7 @@ const Home = () => {
                                 </td>
                                 <td>
                                     <div className="card">
-                                    <Link to="/epic"><img src="https://camo.githubusercontent.com/aab3b35653d7f6ca27f08b9db5839aeaa651897a2cbf9c2a464ce01c15e4d315/68747470733a2f2f657069632e677366632e6e6173612e676f762f617263686976652f6e61747572616c2f323032322f30332f31382f706e672f657069635f31625f32303232303331383032313531342e706e67" className="card-img-top" alt="Epic" /></Link>
+                                    <Link to="/epic"><img src={epicImg} className="card-img-top" alt="Epic" /></Link>
                                         <div className="card-body">
                                             <h5 className="card-title">Epic</h5>
                                             <p className="card-text">Earth Polychromatic Imaging Camera</p>
