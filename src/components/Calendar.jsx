@@ -79,8 +79,8 @@ const Calendar = () => {
                 const dateArr = [];
 
                 data.map(e => {
-                    if (e.url.startsWith('https://apod.nasa.gov/')) imageArr.push(e.url);
-                    else if (e.url.startsWith('https://www.youtube.com/')) imageArr.push(getThumbnail(e.url));
+                    if (e.media_type === 'image') imageArr.push(e.url);
+                    else if (e.media_type === 'video' && e.url.startsWith('https://www.youtube.com/')) imageArr.push(getThumbnail(e.url));
 
                     dateArr.push(e.date);
                 });

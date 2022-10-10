@@ -40,7 +40,7 @@ const Apod = () => {
             if (data.media_type === 'image') setIsImage(true);
             else {
                 setIsImage(false);
-                if (data.url.startsWith('https://www.youtube.com/')) setIsYouTube(true);
+                if (data.media_type === 'video' && data.url.startsWith('https://www.youtube.com/')) setIsYouTube(true);
                 else setIsYouTube(false);
             }
 
