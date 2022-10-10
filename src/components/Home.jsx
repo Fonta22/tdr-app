@@ -23,21 +23,10 @@ const Home = () => {
         const response = await axios.get('https://epic.gsfc.nasa.gov/api/natural?api_key=${API_KEY}');
         const data = await response.data;
 
-        // common variables
         const date = data[0].date.split(' ')[0].replaceAll('-', '/');
-        const image = `https://epic.gsfc.nasa.gov/archive/natural/${date}/png/${data[0].image}.png`
+        const image = `https://epic.gsfc.nasa.gov/archive/natural/${date}/png/${data[0].image}.png`;
         setEpicImg(image);
     }
-
-    /*async function epic() {
-        const response = await axios.get(url);
-        const data = await response.data;
-
-        // common variables
-        const date = data[0].date.split(' ')[0].replaceAll('-', '/');
-        const image = `https://epic.gsfc.nasa.gov/archive/natural/${date}/png/${data[0].image}.png`
-        return image;
-    }*/
     
     const getCalendarImg = async () => {
         const date = new Date();
