@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { getMapURL } from '../modules/getMapURL.ts';
+import { formatDate } from '../modules/formatDate.ts';
 import { isMobile } from "react-device-detect";
 
 const Epic = () => {
@@ -39,7 +40,7 @@ const Epic = () => {
             });
         }
 
-        setDate(date);
+        setDate(formatDate(date));
         setImages(images);
 
         setImage(images[0].image);
