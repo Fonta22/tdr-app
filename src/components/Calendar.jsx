@@ -45,10 +45,6 @@ const Calendar = () => {
         setYear(e.target.value);
     }
 
-    /*const replace = (url) => {
-        location.replace(url);
-    }*/
-
     useEffect(() => {
         getData();
 
