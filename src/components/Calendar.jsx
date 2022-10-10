@@ -3,6 +3,7 @@ import axios from 'axios';
 import { getThumbnail } from '../modules/getThumbnail.ts';
 import { getMonthName, monthNames } from '../modules/getMonthName.ts';
 import { daysInMonth } from '../modules/daysInMonth.ts';
+import { formatDate } from '../modules/formatDate.ts';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
@@ -106,7 +107,7 @@ const Calendar = () => {
                 <div style={{ width: 300 }}>
                     {images.map((e, i) => {
                         return (
-                            <Link to={'/apod?date=' + dates[i]}><img src={e} alt={i + 1} className="resize" style={{ width: 60, height: 60 }}/></Link>
+                            <Link to={'/apod?date=' + dates[i]}><img src={e} alt={i + 1} key={i + 1} title={formatDate(dates[i])} className="resize" style={{ width: 60, height: 60 }}/></Link>
                         );
                     })}
                 </div>
