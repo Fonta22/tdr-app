@@ -9,7 +9,7 @@ export function formatDate(date: string): string {
 
     const year: string = dateArr[0];
     const month: string = dateArr[1];
-    const day: string = Number(dateArr[2]).toString();
+    const day: string = Number(dateArr[2]).toString(); // delete first 0
 
     const formatted: string = `${day}/${month}/${year}`;
     return formatted;
