@@ -28,7 +28,8 @@ const Rover = () => {
     // setSol(115);
 
 
-    const getUrl = (sol, key) => `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${key}&sol=${sol}`;
+    const getUrl = (sol, key) =>
+        `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=${key}&sol=${sol}`;
 
     async function getCam(target, photos) {
         let arr = [];
@@ -52,9 +53,9 @@ const Rover = () => {
         const photo_count = photos.length;
 
         console.log(`Found ${photo_count} images`);
-        console.log(photos);
+        // console.log(photos);
 
-        //setCaption(`This images were taken by the Curiosity NASA Rover in Mars the day ${photos[0].earth_date}, Sol ${sole}.`);
+        // setCaption(`This images were taken by the Curiosity NASA Rover in Mars the day ${photos[0].earth_date}, Sol ${sole}.`);
         setEarthDate(formatDate(photos[0].earth_date));
 
         //// SET CAMS ////
