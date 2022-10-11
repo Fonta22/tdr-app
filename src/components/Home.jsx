@@ -11,16 +11,16 @@ const Home = () => {
 
     const API_KEY = process.env.REACT_APP_API_KEY;
 
-    const getApod = async () => {
+    const getApodImg = async () => {
         const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
         const data = await res.data;
 
-        if (data.url.startsWith('https://apod.nasa.gov/')) setApod(data.url);
-        else if (data.url.startsWith('https://www.youtube.com/')) setApod(getThumbnail(data.url));
+        if (data.media_type === 'image') setApod(data.url);
+        else if (data.media_type === 'video' && data.url.startsWith('https://www.youtube.com/')) setApod(getThumbnail(data.url));
     }
     
     const getEpicImg = async () => {
-        const response = await axios.get('https://epic.gsfc.nasa.gov/api/natural?api_key=${API_KEY}');
+        const response = await axios.get(`https://epic.gsfc.nasa.gov/api/natural?api_key=${API_KEY}`);
         const data = await response.data;
 
         const date = data[0].date.split(' ')[0].replaceAll('-', '/');
@@ -47,7 +47,7 @@ const Home = () => {
 
     useEffect(() => {
         console.log('yus iFEKT!!');
-        getApod();
+        getApodImg();
         getCalendarImg();
         getEpicImg();
     }, []);
