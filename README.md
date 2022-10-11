@@ -1,4 +1,4 @@
-# `3:18 AM`
+# tdr-app
 ## ![CT](https://www.speedrun.com/images/flags/es/ct.png)
 El meu treball consisteix en la realització d'una pàgina web, empleant les APIs públiques de la Nasa, i la tecnologia del framework de JavaScript React JS, una de les eines més utilitzades en el món de la programació actual i la més rellevant, amb la qual la majoria de les pàgines webs actuals estàn fetes (Facebook, Instagram, entre altres). L'objectiu és aprendre React, una habilitat necessària en el món de la programació actual, i també explicar com funcionen les APIs de la Nasa. Les APIs, retornen metadata, és a dir, dades contingudes en aquest cas en format JSON, les quals s’han de tractar per a mostrar-les visualment en forma de pàgina web. Aquest treball de recerca uneix dos dels meus temes d’interés: la programació i l’espai.
 
