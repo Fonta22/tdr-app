@@ -45,6 +45,7 @@ renderitzar
 repositori
 request
 response
+script
 software
 sol (mart)
 string
