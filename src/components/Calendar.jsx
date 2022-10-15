@@ -112,17 +112,19 @@ const Calendar = () => {
                 
                 <div className="input-group mb-3" style={inpStyle}>
                     <span className="input-group-text" htmlFor="inputGroupSelect01" style={{ width: 100 }}>Month</span>
-                    <select className="form-select" id="inputGroupSelect01" defaultValue="Select Month..." onChange={e => updateMonth(e)} style={selStyle}>
-                        <option key="0">Select Month...</option>
+                    <select className="form-select" id="inputGroupSelect01" defaultValue="Month" onChange={e => updateMonth(e)} style={selStyle}>
+                        <option key="0">{monthName}</option>
                         {monthNames.map((month, i) => {
-                            return <option value={i + 1} key={i + 1}>{month}</option>
+                            if (month != monthName) {
+                                return <option value={i + 1} key={i + 1}>{month}</option>
+                            }
                         })}
                     </select>
                 </div>
 
                 <div className="input-group mb-3" style={inpStyle}>
                     <span className="input-group-text" id="basic-addon1" style={{ width: 100 }}>Year</span>
-                    <input onChange={handleInput} type="number" className="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" />
+                    <input onChange={handleInput} type="number" className="form-control" placeholder="Year" defaultValue={staticYear} aria-label="Year" aria-describedby="basic-addon1" />
                 </div>
 
                 <br />
