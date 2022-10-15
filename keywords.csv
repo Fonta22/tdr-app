@@ -1,4 +1,4 @@
-Word,Definition
+WORD,DEFINITION
 .env,Fitxer de variables d'entorn
 .gitignore,Llista de fitxers ignorats per Git
 api,Application Programming Interfaces. En català Interfície de Programació d'Aplicacions
@@ -48,8 +48,8 @@ request,
 response,
 script,
 software,
-sol (mart),
-string,
+sol (mart),"És un dia al planeta Mart. Equival a 24 hores, 39 minuts i 35.244 segons."
+string,"Tipus de variable. Es tracta d'una cadena de caràcters, per exemple podria ser un text."
 typescript,
 url,
 variable,
