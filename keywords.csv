@@ -1,0 +1,58 @@
+.env,Fitxer de variables d'entorn
+.gitignore,Llista de fitxers ignorats per Git
+api,Application Programming Interfaces. En català Interfície de Programació d'Aplicacions
+api key,Clau per a fer requests a una API
+array,Tipus de variable. Té una estructura de llista
+arxiu,Depenent del context es pot tractar d'una base de dades o d'un fitxer amb codi o text
+backend,"Part de la pàgina web en la que s'executa la lògica. No és visible, sinó que s'executa en el rerefons de l'aplicació"
+booleà,Tipus de variable. Només pot tenir un valor verdader o fals
+copyright,Un tipus de propietat intel·lectual que garanteix al propietari el dret exclusiu de copiar o distribuïr la seva obra
+css,Cascading Style Sheets
+exportació funcions,"Les funcions es poden exportar, per a ser utilitzades en altres scripts"
+feed,"Posts de diferents xarxes socials estructurats en forma de ""paret"""
+fetch,"En anglès significa ""recuperar"", per tant en el context de la programació representa la recuperació de dades."
+framework,Entorn de treball per a programació. Facilita el treball gràcies a múltiples eines i utilitats.
+frontend,"La part de la web visible per a l'usuari, és a dir l'interfície"
+funció,"Subrutina dins d'una rutina de programació. Pot ser executada varis cops, i retornar valors."
+git,Programari de sistema de control de versions
+hash,"Text encriptat usant un sistema d'encriptació. Els sistemes d'encriptació més utilitzats són MD5 i SHA-1, però n'hi ha molts"
+hd,"High Definition. Parlant d'imatges, seria una imatge en alta qualitat"
+hook,
+html,Hyper Text Markup Language
+insight,"Anàlis profund sobre algo. En el context del GitHub, serien les gràfiques de contribució, commits, etc."
+issue,Propostes de canvis en un projecte o repositori.
+javascript,Llenguatge de programació molt utilitzat per al desenvolupament web
+jsx,Versió de JavaScript desenvolupada per a React. Permet usar elements HTML dins del codi JavaScript.
+link,
+llenguatge de programació,"Sintaxi utilitzada per a programar un programa. N'hi ha molts, i alguns són compatibles entre ells. Ex: JavaScript, Python, Visual Basic, etc."
+llibreria,Funcions públiques importades gràcies a un instal·lador de paquets o manualment.
+map,Funció de JavaScript que permet recorrer un array seleccionant cada element.
+mapejar,Realitzar un map a un array.
+markdown,"Llenguatge de marcat lleuger, que seguint un format concret permet escriure documents. És molt utilitzat per a la documentació de projectes de programació"
+microsoft paint,"Programa natiu de Windows, desenvolupat per Microsoft. Permet fer dibuixos simples en ordinador i exportar-los en format PNG."
+mètode,Funció d'una classe o objecte JavaScript.
+mòdul,Funció importada des d'una llibreria.
+open source,"És un projecte de codi obert, per tant tothom pot contribuïr a millorar-lo"
+paràmetres URL,Paràmetres especificats en l'URL d'una pàgina web
+php,"Hypertext Pre-Processor. És un llenguatge de programació que era molt usat, en l'actualitat segueix siguent molt important, però no s'utilitza tant degut a [NO SE XD]"
+public domain,"Domini public. Patrimoni intel·lectual sense copyright, és a dir, de lliure d'us"
+pull request,Sol·licitud de canvis en un repositori Open Source. Aquest és el sistema amb el que la gent pot contribuïr a repositoris Open Source.
+python,"Llenguatge de programació molt utilitzat actualment degut a que té llibreries de molts àmbits, i té una sintaxi simple i relativament fàcil de comprendre."
+pàgina,
+redirecció,
+release,
+renderitzar,
+repositori,
+request,
+response,
+script,
+software,
+sol (mart),
+string,
+typescript,
+url,
+variable,
+variable d'entorn,
+variable global,
+versió,
+web,
