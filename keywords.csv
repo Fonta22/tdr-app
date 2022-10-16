@@ -1,4 +1,4 @@
-WORD,DEFINITION
+Word,Definition
 .env,Fitxer de variables d'entorn
 .gitignore,Llista de fitxers ignorats per Git
 api,Application Programming Interfaces. En català Interfície de Programació d'Aplicacions
