@@ -23,7 +23,7 @@ html,Hyper Text Markup Language
 insight,"Anàlisi profund sobre algo. En el context del GitHub, serien les gràfiques de contribució, commits, etc."
 issue,Propostes de canvis en un projecte o repositori.
 javascript,Llenguatge de programació molt utilitzat per al desenvolupament web
-jsx,Versió de JavaScript desenvolupada per a React. Permet usar elements HTML dins del codi JavaScript.
+jsx,Variant de JavaScript desenvolupada per a React. Permet usar i modificar elements HTML dins del codi JavaScript.
 link,
 llenguatge de programació,"Sintaxi utilitzada per a programar un programa. N'hi ha molts, i alguns són compatibles entre ells. Ex: JavaScript, Python, Visual Basic, etc."
 llibreria,Funcions públiques importades gràcies a un instal·lador de paquets o manualment.
