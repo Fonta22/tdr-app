@@ -7,7 +7,7 @@ array,Tipus de variable. Té una estructura de llista
 arxiu,Depenent del context es pot tractar d'una base de dades o d'un fitxer amb codi o text
 backend,"Part de la pàgina web en la que s'executa la lògica. No és visible, sinó que s'executa en el rerefons de l'aplicació"
 booleà,Tipus de variable. Només pot tenir un valor vertader o fals
-copyright,Un tipus de propietat intel·lectual que garanteix al propietari el dret exclusiu de copiar o distribuïr la seva obra
+copyright,Un tipus de propietat intel·lectual que garanteix al propietari el dret exclusiu de copiar o distribuir la seva obra
 css,Cascading Style Sheets
 exportació funcions,"Les funcions es poden exportar, per a ser utilitzades en altres scripts"
 feed,"Posts de diferents xarxes socials estructurats en forma de ""paret"""
