@@ -10,6 +10,7 @@ import Apod from './components/Apod';
 import Epic from './components/Epic';
 import Rover from './components/Rover';
 import Calendar from './components/Calendar';
+import About from './components/About';
 
 function App() {
   const logo = 'https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg';
@@ -25,6 +26,7 @@ function App() {
               <Link to="/epic" className="nav-link" id="epic-link">Epic</Link>
               <Link to="/rover" className="nav-link" id="rover-link">Rover</Link>
               <Link to="/calendar" className="nav-link" id="calendar-link">Calendar</Link>
+              <Link to="/about" className="nav-link" id="calendar-link">About</Link>
             </div>
           </div>
         </div>
@@ -37,6 +39,7 @@ function App() {
           <Route path="/epic" element={<Epic />} />
           <Route path="/rover" element={<Rover />} />
           <Route path="/calendar" element={<Calendar />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>

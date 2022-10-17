@@ -80,3 +80,7 @@ img.flagicon {
 .hover-text {
   border-bottom: 2px dotted;
 }
+
+#en, #ca, #es {
+  margin-bottom: 30px;
+}
