@@ -26,8 +26,8 @@ javascript,Llenguatge de programació molt utilitzat per al desenvolupament web
 jsx,Variant de JavaScript desenvolupada per a React. Permet usar i modificar elements HTML dins del codi JavaScript.
 link,
 llenguatge de programació,"Sintaxi utilitzada per a programar un programa. N'hi ha molts, i alguns són compatibles entre ells. Ex: JavaScript, Python, Visual Basic, etc."
-llibreria,Funcions públiques importades gràcies a un instal·lador de paquets o manualment.
-map,Funció de JavaScript que permet recorrer un array seleccionant cada element.
+llibreria,Funcions públiques que poden ser utilitzades per a optimitzar o facilitar el treball en el procés d’elaborar un programa. Poden ser importades gràcies a un instal·lador de paquets o manualment.
+map,Mètode de JavaScript que permet recorre un array seleccionant-ne cada element.
 mapejar,Realitzar un map a un array.
 markdown,"Llenguatge de marcat lleuger, que seguint un format concret permet escriure documents. És molt utilitzat per a la documentació de projectes de programació"
 microsoft paint,"Programa natiu de Windows, desenvolupat per Microsoft. Permet fer dibuixos simples en ordinador i exportar-los en format PNG."
