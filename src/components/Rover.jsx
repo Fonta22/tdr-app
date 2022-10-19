@@ -207,7 +207,8 @@ const Rover = () => {
                     }}>
                         {/*<button id="arrow-left"></button>*/}
                         <input className="form-control" type="number" placeholder="Sol" name="search" defaultValue={sol} autoComplete="off" />
-                        <button className="btn btn-outline-secondary" type="submit">Submit</button>
+                        <br />
+                        <button className="btn btn-outline-secondary" type="submit" style={{ marginTop: 1 + 'rem' }}>Submit</button>
                         {/*<button id="arrow-right"></button>*/}
                     </form>
                 </center>

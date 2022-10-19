@@ -31,3 +31,6 @@ yarn-error.log*
 
 # specific files
 sort_file.py
+
+# responses folder
+/responses
