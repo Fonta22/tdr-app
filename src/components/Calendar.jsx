@@ -132,8 +132,6 @@ const Calendar = () => {
                     if (selected === '') window.location.replace('/calendar');
                     else window.location.replace('/calendar?month=' + selected + '&year=' + year);
                 }}>Submit</button>
-                <br />
-                <br />
             </center>
         </div>
     );

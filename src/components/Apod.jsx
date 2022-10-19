@@ -75,10 +75,6 @@ const Apod = () => {
                 <img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;&nbsp;
                 <i>{state.explanation_cat}</i>
             </p>
-            
-            <br />
-            <br />
-            <br />
         </div>
     );
 }

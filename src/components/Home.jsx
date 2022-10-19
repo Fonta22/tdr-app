@@ -114,7 +114,6 @@ const Home = () => {
                     </table>
                     <Link to="/about" className="btn btn-outline-dark">About this website</Link>
                 </center>
-                <br />
             </div>
         );
     } else {
@@ -177,10 +176,9 @@ const Home = () => {
                     </table>
                     <Link to="/about" className="btn btn-outline-dark">About this website</Link>
                 </center>
-                <br />
             </div>
         );
     }
 }
 
-export default Home; // E
+export default Home;
