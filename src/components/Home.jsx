@@ -113,6 +113,7 @@ const Home = () => {
                         </tbody>
                     </table>
                     <Link to="/about" className="btn btn-outline-dark">About this website</Link>
+                    <br />
                 </center>
             </div>
         );
@@ -175,6 +176,7 @@ const Home = () => {
                         </tbody>
                     </table>
                     <Link to="/about" className="btn btn-outline-dark">About this website</Link>
+                    <br />
                 </center>
             </div>
         );
