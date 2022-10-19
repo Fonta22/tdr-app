@@ -81,6 +81,8 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </td>
+                            </tr>
+                            <tr>
                                 <td>
                                     <div className="card">
                                     <Link to="/rover"><img src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/00122/opgs/edr/fcam/FRA_408331341EDR_F0050938FHAZ00304M_.JPG" className="card-img-top" alt="Rover" /></Link>
