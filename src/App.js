@@ -26,7 +26,8 @@ function App() {
               <Link to="/epic" className="nav-link" id="epic-link">Epic</Link>
               <Link to="/rover" className="nav-link" id="rover-link">Rover</Link>
               <Link to="/calendar" className="nav-link" id="calendar-link">Calendar</Link>
-              <Link to="/about" className="nav-link" id="calendar-link">About</Link>
+              <Link to="/about" className="nav-link" id="about-link">About</Link>
+              <a href="https://github.com/Fonta22/tdr-app" className="nav-link" id="github-link"><i class="bi bi-github" /></a>
             </div>
           </div>
         </div>

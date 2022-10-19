@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { isMobile } from "react-device-detect";
 
+import Portada from '../img/Portada_1x1.png';
+
 const About = () => {
     const [margin, setMargin] = useState('auto');
+    const [imgStyle, setImgStyle] = useState('100%');
 
     useEffect(() => {
-        if (!isMobile) setMargin(200);
+        if (!isMobile) {
+            setMargin(200);
+            setImgStyle(650);
+        }
     }, []);
 
     return (
         <div>
             <center>
                 <h1>About</h1>
-                <p>This website was made by <b>Pau Fontàs</b> as <i>Treball de Recerca</i>.</p>
+                <p style={{ marginBottom: 1.5 + 'rem' }}>This website was made by <b>Pau Fontàs</b> as <i>Treball de Recerca</i>.</p>
+                <img src={Portada} alt="Portada" style={{ width: imgStyle, marginBottom: 1.5 + 'rem' }} />
+                <p>The website's <i>Git</i> repository is available in <b>GitHub <i className="bi bi-github" /></b></p>
+                <a href="https://github.com/Fonta22/tdr-app">Fonta22/tdr-app</a>
             </center>
             <br />
             <div style={{ marginLeft: margin, marginRight: margin }}>
