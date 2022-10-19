@@ -112,6 +112,7 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
+                    <Link to="/about" className="btn btn-outline-dark">About this website</Link>
                 </center>
                 <br />
             </div>
@@ -174,7 +175,7 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/about" className="btn btn-outline-dark"></Link>
+                    <Link to="/about" className="btn btn-outline-dark">About this website</Link>
                 </center>
                 <br />
             </div>
