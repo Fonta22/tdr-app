@@ -112,7 +112,6 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/about">About this website</Link>
                 </center>
                 <br />
             </div>
@@ -175,7 +174,6 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/about">About this website</Link>
                 </center>
                 <br />
             </div>

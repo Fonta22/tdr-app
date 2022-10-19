@@ -41,6 +41,10 @@ function App() {
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <center>
+          <Link to="/about">About this website</Link>
+        </center>
+        <br />
       </div>
     </Router>
   );
