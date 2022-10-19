@@ -1,5 +1,5 @@
 /**
- * Geneartes a Google Maps URL with the specified coordinates and zoom level.
+ * Generates a Google Maps URL with the specified coordinates and zoom level.
  * 
  * @param {number} lat Latitude
  * @param {number} lon Longitude
