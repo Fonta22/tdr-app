@@ -128,7 +128,7 @@ const Calendar = () => {
                 </div>
 
                 <br />
-                <button className="btn btn-light" onClick={() => {
+                <button className="btn btn-dark" onClick={() => {
                     if (selected === '') window.location.replace('/calendar');
                     else window.location.replace('/calendar?month=' + selected + '&year=' + year);
                 }}>Submit</button>

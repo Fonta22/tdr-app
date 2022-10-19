@@ -174,6 +174,7 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
+                    <Link to="/about" className="btn btn-outline-dark"></Link>
                 </center>
                 <br />
             </div>
