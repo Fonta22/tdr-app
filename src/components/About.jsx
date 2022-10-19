@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { isMobile } from "react-device-detect";
 
-import Portada from '../img/Portada_1x1.png';
+import Portada from '../img/portada/Portada_1x1.png';
 
 const About = () => {
     const [margin, setMargin] = useState('auto');
