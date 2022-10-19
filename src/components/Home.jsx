@@ -176,6 +176,8 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
+                    <br />
+                    <Link to="/about">About this website</Link>
                 </center>
                 <br />
             </div>
