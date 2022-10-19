@@ -112,7 +112,7 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/about" className="btn btn-outline-dark">About this website</Link>
+                    <Link to="/about" className="btn btn-outline-dark" style={{ marginBottom: 1.5 + 'rem' }}>About this website</Link>
                     <br />
                 </center>
             </div>
@@ -175,7 +175,7 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/about" className="btn btn-outline-dark">About this website</Link>
+                    <Link to="/about" className="btn btn-outline-dark" style={{ marginBottom: 1.5 + 'rem' }}>About this website</Link>
                     <br />
                 </center>
             </div>
