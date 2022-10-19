@@ -72,7 +72,7 @@ const Apod = () => {
             <h2>{state.title}</h2>
             <p align="justify">{state.explanation}</p>
             <p align="justify" style={{ color: '#808080' }}>
-                <img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;&nbsp;
+                <img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;
                 <i>{state.explanation_cat}</i>
             </p>
         </div>
