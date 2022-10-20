@@ -61,7 +61,7 @@ const Epic = () => {
                     isMobile ? <img src={image} alt="img" className="epic-img-mobile" />
                     : <img src={image} alt="img" className="epic-img-desktop" />
                 }
-                <div style={{ marginBottom: 30 }}>
+                <div className="epic-data">
                     <p>
                         <b>{time}</b>
                         <br />
