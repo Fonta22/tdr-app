@@ -58,8 +58,8 @@ const Epic = () => {
                 <h1>Epic</h1>
                 <p>Earth Polychromatic Imaging Camera <b>{date}</b></p>
                 {
-                    isMobile ? <img src={image} alt="img" style={{ width: '100%', marginBottom: 20, alignSelf: 'center' }}/>
-                    : <img src={image} alt="img" style={{ width: 450, marginBottom: 20, alignSelf: 'center' }}/>
+                    isMobile ? <img src={image} alt="img" className="epic-img-mobile" />
+                    : <img src={image} alt="img" className="epic-img-desktop" />
                 }
                 <div style={{ marginBottom: 30 }}>
                     <p>
@@ -87,7 +87,7 @@ const Epic = () => {
                                     <th scope="row">{e.time}</th>
                                     <td><code>{e.coords.lat}</code></td>
                                     <td><code>{e.coords.lon}</code></td>
-                                    <td><img src={e.image} alt={i} style={{ height: 50 }} /></td>
+                                    <td><img src={e.image} alt={i} className="epic-img-table" /></td>
                                     <td><button className="btn btn-primary" onClick={() => {
                                         setImage(e.image);
                                         setTime(e.time);

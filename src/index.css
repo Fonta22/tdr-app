@@ -74,13 +74,34 @@ img.flagicon {
 .resize:hover {
   transform: scale(1.7, 1.7);
 }
-/*.rover-cam {
-  height: 300px;
-}*/
+
 .hover-text {
   border-bottom: 2px dotted;
 }
 
+/* APOD */
+.explanation-cat {
+  color: #808080
+}
+
+/* EPIC */
+.epic-img-mobile {
+  width: 100%;
+  margin-bottom: 20px;
+  align-self: center
+}
+
+.epic-img-desktop {
+  width: 450px;
+  margin-bottom: 20px;
+  align-self: center
+}
+
+.epic-img-table {
+  height: 50px
+}
+
+/* ABOUT */
 #en, #ca, #es {
   margin-bottom: 30px;
 }
