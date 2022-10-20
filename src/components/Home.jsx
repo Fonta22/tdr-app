@@ -46,7 +46,6 @@ const Home = () => {
     }
 
     useEffect(() => {
-        console.log('yus iFEKT!!');
         getApodImg();
         getCalendarImg();
         getEpicImg();
