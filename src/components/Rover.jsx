@@ -107,7 +107,7 @@ const Rover = () => {
                 <br />
                 <center>
                 <h2 className="rover-caption">Photos from <span title="One sol is a day in Mars." className="hover-text">sol</span> <code>{sol}</code></h2>
-                <p className="rover-paragraph">This images were taken by the <b>Curiosity</b> Rover in Mars the day <b>{earthDate}</b>, Sol <b>{sol}</b>.</p>
+                <p className="rover-paragraph">These images were taken by the <b>Curiosity</b> Rover in Mars the day <b>{earthDate}</b>, Sol <b>{sol}</b>.</p>
                 <table>
                     <tbody>
                         <tr>
@@ -207,7 +207,7 @@ const Rover = () => {
                 <br />
                 <center>
                 <h2 className="rover-caption">Photos from <span title="One sol is a day in Mars." className="hover-text">sol</span> <code>{sol}</code></h2>
-                <p className="rover-paragraph">This images were taken by the <b>Curiosity</b> Rover in Mars the day <b>{earthDate}</b>, Sol <b>{sol}</b>.</p>
+                <p className="rover-paragraph">These images were taken by the <b>Curiosity</b> Rover in Mars the day <b>{earthDate}</b>, Sol <b>{sol}</b>.</p>
                 <table>
                     <tbody>
                         <tr>
