@@ -124,6 +124,14 @@ img.flagicon {
 }
 
 /* ABOUT */
+.about-paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.portada-img {
+  margin-bottom: 1.5rem;
+}
+
 #en, #ca, #es {
   margin-bottom: 30px;
 }

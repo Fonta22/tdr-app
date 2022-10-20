@@ -18,8 +18,8 @@ const About = () => {
         <div>
             <center>
                 <h1>About</h1>
-                <p style={{ marginBottom: 1.5 + 'rem' }}>This website was made by <b>Pau Fontàs</b> as <i>Treball de Recerca</i>.</p>
-                <img src={Portada} alt="Portada" style={{ width: imgStyle, marginBottom: 1.5 + 'rem' }} />
+                <p className="about-paragraph">This website was made by <b>Pau Fontàs</b> as <i>Treball de Recerca</i>.</p>
+                <img src={Portada} alt="Portada" className="portada-img" style={{ width: imgStyle }} />
                 <p>The website's <i>Git</i> repository is available in <b>GitHub <i className="bi bi-github" /></b></p>
                 <a href="https://github.com/Fonta22/tdr-app" className="btn btn-outline-primary"><i class="bi bi-git" />&nbsp;&nbsp;Fonta22/tdr-app</a>
             </center>
