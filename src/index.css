@@ -110,7 +110,7 @@ img.flagicon {
   margin-bottom: 1.5rem;
 }
 
-/*ROVER*/
+/* ROVER */
 .rover-caption {
   margin-top: 20px;
 }
@@ -134,4 +134,9 @@ img.flagicon {
 
 #en, #ca, #es {
   margin-bottom: 30px;
+}
+
+/* CALENDAR */
+#submit-msg {
+  margin-top: 1rem;
 }

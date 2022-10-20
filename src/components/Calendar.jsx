@@ -16,7 +16,10 @@ const Calendar = () => {
     const [year, setYear] = useState('');
     const [staticYear, setStaticYear] = useState('');
     const [monthName, setMonthName] = useState('');
+    const [monthNum, setMonthNum] = useState('');
     const [selected, setSelected] = useState('');
+    const [path, setPath] = useState(window.location.href.split('/').pop());
+    const [submitMsg, setSubmitMsg] = useState('');
 
     const [inpStyle, setInpStyle] = useState({ width: 500 });
     const [selStyle, setSelStyle] = useState({ width: 400 });
@@ -32,13 +35,14 @@ const Calendar = () => {
     const currentMonth = date.getMonth() + 1;
     const currentYear = date.getFullYear();
 
-    console.log(today, currentMonth);
+    //console.log(today, currentMonth);
 
     const updateMonth = (e) => {
         const select = e.target;
         const value = select.options[select.selectedIndex].value;
-        console.log(value); // en
+        console.log('value: ' + value); // en
         setSelected(value);
+        setSubmitMsg('');
     }
 
     const handleInput = (e) => {
@@ -59,17 +63,23 @@ const Calendar = () => {
 
             let year = new URLSearchParams(location.search).get('year');
             let month = new URLSearchParams(location.search).get('month');
-            console.log(year);
+            //console.log(year);
 
             if (month === null) month = currentMonth;
             if (year === null) year = currentYear;
 
             let days = daysInMonth(month, year);
+            let url;
 
-            if (month === currentMonth) days = today;
+            console.log('currentmonth', currentMonth, 'month', month)
+            if (month === currentMonth.toString()) {
+                url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01`;
+            } else {
+                url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01&end_date=${year}-${month}-${days}`;
+            }
 
             try {
-                const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01&end_date=${year}-${month}-${days}`); // date=YYYY-MM-DD
+                const res = await axios.get(url); // date=YYYY-MM-DD
                 const data = await res.data;
 
                 const imageArr = [];
@@ -85,6 +95,7 @@ const Calendar = () => {
                 setStaticYear(year.toString());
                 setYear(year);
                 setMonthName(getMonthName(month));
+                setMonthNum(month);
                 setImages(imageArr);
                 setDates(dateArr);
                 setStatus('');
@@ -113,7 +124,7 @@ const Calendar = () => {
                 <div className="input-group mb-3" style={inpStyle}>
                     <span className="input-group-text" htmlFor="inputGroupSelect01" style={{ width: 100 }}>Month</span>
                     <select className="form-select" id="inputGroupSelect01" defaultValue="Month" onChange={e => updateMonth(e)} style={selStyle}>
-                        <option key="0">{monthName}</option>
+                        <option key="0" value={monthNum}>{monthName}</option>
                         {monthNames.map((month, i) => {
                             if (month != monthName) {
                                 return <option value={i + 1} key={i + 1}>{month}</option>
@@ -129,9 +140,18 @@ const Calendar = () => {
 
                 <br />
                 <button className="btn btn-dark" onClick={() => {
-                    if (selected === '') window.location.replace('/calendar');
-                    else window.location.replace('/calendar?month=' + selected + '&year=' + year);
+                    if (selected === '' || selected === monthNum.toString()) {
+                        if (window.location.href.split('/').pop() !== path) {
+                            window.location.replace('/calendar');
+                        }
+                        // else -> error message
+                        else setSubmitMsg('Already selected.');
+                    }
+                    else {
+                        window.location.replace('/calendar?month=' + selected + '&year=' + year);
+                    }
                 }}>Submit</button>
+                <p id="submit-msg">{submitMsg}</p>
             </center>
         </div>
     );

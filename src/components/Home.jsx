@@ -111,7 +111,7 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/about" className="btn btn-outline-dark" id="home-about-link"><i class="bi bi-info-square-fill" />&nbsp;&nbsp;About this website</Link>
+                    <Link to="/about" className="btn btn-outline-dark" id="home-about-link"><i className="bi bi-info-square-fill" />&nbsp;&nbsp;About this website</Link>
                     <br />
                 </center>
             </div>
@@ -174,7 +174,7 @@ const Home = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <Link to="/about" className="btn btn-outline-dark" id="home-about-link"><i class="bi bi-info-square-fill" />&nbsp;&nbsp;About this website</Link>
+                    <Link to="/about" className="btn btn-outline-dark" id="home-about-link"><i className="bi bi-info-square-fill" />&nbsp;&nbsp;About this website</Link>
                     <br />
                 </center>
             </div>
