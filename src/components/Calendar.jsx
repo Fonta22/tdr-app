@@ -41,7 +41,7 @@ const Calendar = () => {
         const select = e.target;
         const value = select.options[select.selectedIndex].value;
         console.log('value: ' + value); // en
-        setSelected(value);
+        setSelected(+value);
         setSubmitMsg('');
     }
 
