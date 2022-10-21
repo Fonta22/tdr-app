@@ -7,6 +7,21 @@ const About = () => {
     const [margin, setMargin] = useState('auto');
     const [imgWidth, setImgWidth] = useState('100%');
 
+    const downloadPDF = () => {
+        // using Java Script method to get PDF file
+        fetch('Treball de Recerca.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'Treball de Recerca.pdf';
+                alink.click();
+            })
+        })
+    }
+
     useEffect(() => {
         if (!isMobile) {
             setMargin(200);
@@ -38,10 +53,10 @@ const About = () => {
                     <img className="flagicon" src="https://www.speedrun.com/images/flags/es.png" alt="Spanish" />&nbsp;&nbsp;
                     Mi trabajo consiste en la realización de una página web, empleando las <b>APIs públicas</b> de la <b>NASA</b> y la tecnología del framework de JavaScript <b>React JS</b>, una de las herramientas más utilizadas en el mundo de la programación actual y la más relevante, con la que la mayoría de las páginas web actuales están desarrolladas (Facebook, Instagram, entre otras). El objetivo es aprender React, una habilidad necesaria en el mundo de la programación actual, y, también, explicar cómo funcionan las APIs de la Nasa. Las APIs devuelven metadata, es decir, datos contenidos, en este caso, en formato JSON, las cuales han de ser tratadas para mostrarlas visualmente en forma de página web. Este <i>Treball de Recerca</i> une dos de mis temas de interés: <b>la programación y el espacio</b>.
                 </p>
-                <h2>Download the Document</h2>
+                <h2>Download the document</h2>
                 <p className="about-paragraph">Download the <i>Treball de Recerca</i> document in <b>PDF</b></p>
                 <center>
-                    <button type="button" class="btn btn-outline-danger">
+                    <button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
                         <i class="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
                     </button>
                 </center>
