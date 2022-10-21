@@ -101,7 +101,7 @@ const About = () => {
                                 </tr>
                                 <tr>
                                     <td>Glossary</td>
-                                    <td>-</td>
+                                    <td>22/10/2022</td>
                                     <td>Catalan</td>
                                     <td>CSV</td>
                                     <td>
