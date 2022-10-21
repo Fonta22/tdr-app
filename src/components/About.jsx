@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { isMobile } from "react-device-detect";
+import { downloadFile } from '../modules/downloadFile.ts';
 
 import Portada from '../img/portada/Portada_1x1.png';
 
@@ -65,9 +66,6 @@ const About = () => {
                 <h2>Download the document</h2>
                 <p className="about-paragraph">Download the <i>Treball de Recerca</i> document in <b>PDF</b></p>
                 <center>
-                    {/*<button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
-                        <i class="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
-                    </button>*/}
                     <table className="table">
                         <thead>
                             <tr>
@@ -81,7 +79,7 @@ const About = () => {
                                 <td>20/10/2022</td>
                                 <td>Catalan</td>
                                 <td>
-                                    <button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
+                                    <button type="button" onClick={() => downloadFile('Treball de Recerca.pdf')} class="btn btn-outline-danger">
                                         <i class="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
                                     </button>
                                 </td>
@@ -106,7 +104,7 @@ const About = () => {
                                 <td>20/10/2022</td>
                                 <td>Catalan</td>
                                 <td>
-                                    <button type="button" onClick={downloadCSV} class="btn btn-outline-success">
+                                    <button type="button" onClick={() => downloadFile('keywords.csv')} class="btn btn-outline-success">
                                     <i className="bi bi-file-earmark-spreadsheet-fill" />&nbsp;&nbsp;Download CSV
                                     </button>
                                 </td>
