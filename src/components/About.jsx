@@ -56,9 +56,35 @@ const About = () => {
                 <h2>Download the document</h2>
                 <p className="about-paragraph">Download the <i>Treball de Recerca</i> document in <b>PDF</b></p>
                 <center>
-                    <button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
+                    {/*<button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
                         <i class="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
-                    </button>
+                    </button>*/}
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Released</th>
+                                <th scope="col">Language</th>
+                                <th scope="col">Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20/10/2022</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;Catalan
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
+                                        <i class="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </center>
             </div>
         </div>
