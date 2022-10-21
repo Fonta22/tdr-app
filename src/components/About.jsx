@@ -48,8 +48,8 @@ const About = () => {
                 <p>The website's <i>Git</i> repository is available in <b>GitHub <i className="bi bi-github" /></b></p>
                 <a href="https://github.com/Fonta22/tdr-app" className="btn btn-outline-primary"><i class="bi bi-git" />&nbsp;&nbsp;Fonta22/tdr-app</a>
             </center>
-            <br />
             <div style={{ marginLeft: margin, marginRight: margin }}>
+                <br />
                 <h2>Abstract</h2>
                 <p id="en" align="justify">
                     <img className="flagicon" src="https://www.speedrun.com/images/flags/gb.png" alt="English" />&nbsp;&nbsp;
@@ -63,7 +63,9 @@ const About = () => {
                     <img className="flagicon" src="https://www.speedrun.com/images/flags/es.png" alt="Spanish" />&nbsp;&nbsp;
                     Mi trabajo consiste en la realización de una página web, empleando las <b>APIs públicas</b> de la <b>NASA</b> y la tecnología del framework de JavaScript <b>React JS</b>, una de las herramientas más utilizadas en el mundo de la programación actual y la más relevante, con la que la mayoría de las páginas web actuales están desarrolladas (Facebook, Instagram, entre otras). El objetivo es aprender React, una habilidad necesaria en el mundo de la programación actual, y, también, explicar cómo funcionan las APIs de la Nasa. Las APIs devuelven metadata, es decir, datos contenidos, en este caso, en formato JSON, las cuales han de ser tratadas para mostrarlas visualmente en forma de página web. Este <i>Treball de Recerca</i> une dos de mis temas de interés: <b>la programación y el espacio</b>.
                 </p>
-                <h2>Download the document</h2>
+                <br />
+                <h2>Documents</h2>
+                <h4>Download the <i>Treball de Recerca</i></h4>
                 <p className="about-paragraph">Download the <i>Treball de Recerca</i> document in <b>PDF</b></p>
                 <center>
                     <table className="table">
@@ -88,7 +90,7 @@ const About = () => {
                     </table>
                 </center>
                 <br />
-                <h3>Download word dictionary</h3>
+                <h4>Download the word dictionary</h4>
                 <p className="about-paragraph">Download the word dictionary <b>CSV</b> file</p>
                 <center>
                     <table className="table">
@@ -105,7 +107,7 @@ const About = () => {
                                 <td>Catalan</td>
                                 <td>
                                     <button type="button" onClick={() => downloadFile('keywords.csv')} class="btn btn-outline-success">
-                                    <i className="bi bi-file-earmark-spreadsheet-fill" />&nbsp;&nbsp;Download CSV
+                                        <i className="bi bi-file-earmark-spreadsheet-fill" />&nbsp;&nbsp;Download CSV
                                     </button>
                                 </td>
                             </tr>
