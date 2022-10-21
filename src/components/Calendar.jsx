@@ -116,7 +116,9 @@ const Calendar = () => {
                 <div style={{ width: 300 }}>
                     {images.map((e, i) => {
                         return (
-                            <Link to={'/apod?date=' + dates[i]}><img src={e} alt={i + 1} key={i + 1} title={formatDate(dates[i])} className="resize" style={{ width: 60, height: 60 }}/></Link>
+                            <Link to={'/apod?date=' + dates[i]}>
+                                <img src={e} alt={i + 1} key={i + 1} title={formatDate(dates[i])} className="resize" style={{ width: 60, height: 60 }} />
+                            </Link>
                         );
                     })}
                 </div>
