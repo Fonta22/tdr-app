@@ -70,13 +70,9 @@ const About = () => {
                         <tbody>
                             <tr>
                                 <td>20/10/2022</td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <img className="flagicon" src="https://www.speedrun.com/images/flags/es/ct.png" alt="Catalan" />&nbsp;&nbsp;Catalan
                                 </td>
-                            </tr>
-                            <tr>
                                 <td>
                                     <button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
                                         <i class="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
