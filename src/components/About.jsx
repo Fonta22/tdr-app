@@ -62,7 +62,7 @@ const About = () => {
                                     <td>Catalan</td>
 
                                     <td>
-                                        <button type="button" onClick={() => downloadFile('Treball de Recerca.pdf')} class="btn btn-outline-danger">
+                                        <button type="button" onClick={() => downloadFile('./documents/Treball de Recerca.pdf')} class="btn btn-outline-danger">
                                             <i className="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
                                         </button>
                                     </td>
@@ -73,7 +73,7 @@ const About = () => {
                                     <td>Catalan</td>
 
                                     <td>
-                                        <button type="button" onClick={() => downloadFile('Glossary.csv')} class="btn btn-outline-success">
+                                        <button type="button" onClick={() => downloadFile('./documents/Glossary.csv')} class="btn btn-outline-success">
                                             <i className="bi bi-file-earmark-spreadsheet-fill" />&nbsp;&nbsp;Download CSV
                                         </button>
                                     </td>
