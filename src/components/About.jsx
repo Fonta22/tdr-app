@@ -41,8 +41,6 @@ const About = () => {
                 </p>
                 <br />
                 <h2>Documents</h2>
-                {/*<h4>Download the <i>Treball de Recerca</i></h4>
-                <p className="about-paragraph">Download the <i>Treball de Recerca</i> document in <b>PDF</b></p>*/}
                 {isMobile ?
                     <center>
                         <table className="table">
@@ -58,9 +56,7 @@ const About = () => {
                             <tbody>
                                 <tr>
                                     <td>Treball de Recerca</td>
-
                                     <td>Catalan</td>
-
                                     <td>
                                         <button type="button" onClick={() => downloadFile('./documents/Treball de Recerca.pdf')} class="btn btn-outline-danger">
                                             <i className="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
@@ -69,9 +65,7 @@ const About = () => {
                                 </tr>
                                 <tr>
                                     <td>Glossary</td>
-
                                     <td>Catalan</td>
-
                                     <td>
                                         <button type="button" onClick={() => downloadFile('./documents/Glossary.csv')} class="btn btn-outline-success">
                                             <i className="bi bi-file-earmark-spreadsheet-fill" />&nbsp;&nbsp;Download CSV
@@ -120,31 +114,6 @@ const About = () => {
                         </table>
                     </center>
                 }
-                {/*<br />
-                <h4>Download the word dictionary</h4>
-                <p className="about-paragraph">Download the word dictionary <b>CSV</b> file</p>
-                <center>
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Released</th>
-                                <th scope="col">Language</th>
-                                <th scope="col">Download</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>20/10/2022</td>
-                                <td>Catalan</td>
-                                <td>
-                                    <button type="button" onClick={() => downloadFile('keywords.csv')} class="btn btn-outline-success">
-                                        <i className="" />&nbsp;&nbsp;Download CSV
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </center>*/}
             </div>
         </div>
     );
