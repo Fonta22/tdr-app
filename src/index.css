@@ -136,6 +136,10 @@ img.flagicon {
   margin-bottom: 30px;
 }
 
+#download-document-table {
+  vertical-align: center;
+}
+
 /* CALENDAR */
 #submit-msg {
   margin-top: 1rem;

@@ -7,19 +7,28 @@ const About = () => {
     const [margin, setMargin] = useState('auto');
     const [imgWidth, setImgWidth] = useState('100%');
 
-    const downloadPDF = () => {
-        // using Java Script method to get PDF file
-        fetch('Treball de Recerca.pdf').then(response => {
-            response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'Treball de Recerca.pdf';
-                alink.click();
-            })
-        })
+    const downloadPDF = async() => {
+        const response = await fetch('Treball de Recerca.pdf');
+        const blob = await response.blob();
+
+        const fileURL = window.URL.createObjectURL(blob);
+
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'Treball de Recerca.pdf';
+        alink.click();
+    }
+
+    const downloadCSV = async () => {
+        const response = await fetch('keywords.csv');
+        const blob = await response.blob();
+
+        const fileURL = window.URL.createObjectURL(blob);
+        
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'keywords.csv';
+        alink.click();
     }
 
     useEffect(() => {
@@ -74,6 +83,31 @@ const About = () => {
                                 <td>
                                     <button type="button" onClick={downloadPDF} class="btn btn-outline-danger">
                                         <i class="bi bi-file-earmark-pdf-fill" />&nbsp;&nbsp;Download PDF
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
+                <br />
+                <h3>Download word dictionary</h3>
+                <p className="about-paragraph">Download the word dictionary <b>CSV</b> file</p>
+                <center>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Released</th>
+                                <th scope="col">Language</th>
+                                <th scope="col">Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20/10/2022</td>
+                                <td>Catalan</td>
+                                <td>
+                                    <button type="button" onClick={downloadCSV} class="btn btn-outline-success">
+                                    <i className="bi bi-file-earmark-spreadsheet-fill" />&nbsp;&nbsp;Download CSV
                                     </button>
                                 </td>
                             </tr>

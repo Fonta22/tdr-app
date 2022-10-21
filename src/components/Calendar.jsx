@@ -126,7 +126,7 @@ const Calendar = () => {
                     <select className="form-select" id="inputGroupSelect01" defaultValue="Month" onChange={e => updateMonth(e)} style={selStyle}>
                         <option key="0" value={monthNum}>{monthName}</option>
                         {monthNames.map((month, i) => {
-                            if (month != monthName) {
+                            if (month !== monthName) {
                                 return <option value={i + 1} key={i + 1}>{month}</option>
                             }
                         })}
