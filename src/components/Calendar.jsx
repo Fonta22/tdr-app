@@ -72,7 +72,7 @@ const Calendar = () => {
             let url;
 
             console.log('currentmonth', currentMonth, 'month', month)
-            if (month.toString() === currentMonth.toString()) {
+            if (month.toString() === currentMonth.toString() && year.toString() === currentYear.toString()) {
                 url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01`;
             } else {
                 url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=${year}-${month}-01&end_date=${year}-${month}-${days}`;
@@ -99,6 +99,8 @@ const Calendar = () => {
                 setImages(imageArr);
                 setDates(dateArr);
                 setStatus('');
+                setSelected(month);
+                console.log('selected: ' + month);
             } catch (err) {
                 setStatus(<code>{err.code}</code>);
             }
@@ -140,7 +142,7 @@ const Calendar = () => {
 
                 <br />
                 <button className="btn btn-dark" onClick={() => {
-                    if (selected === '' || selected.toString() === monthNum.toString()) {
+                    if ((selected === '' || selected.toString() === monthNum.toString()) && year.toString() === staticYear.toString()) {
                         if (window.location.href.split('/').pop() !== path) {
                             window.location.replace('/calendar');
                         }

@@ -8,30 +8,6 @@ const About = () => {
     const [margin, setMargin] = useState('auto');
     const [imgWidth, setImgWidth] = useState('100%');
 
-    const downloadPDF = async() => {
-        const response = await fetch('Treball de Recerca.pdf');
-        const blob = await response.blob();
-
-        const fileURL = window.URL.createObjectURL(blob);
-
-        let alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = 'Treball de Recerca.pdf';
-        alink.click();
-    }
-
-    const downloadCSV = async () => {
-        const response = await fetch('keywords.csv');
-        const blob = await response.blob();
-
-        const fileURL = window.URL.createObjectURL(blob);
-        
-        let alink = document.createElement('a');
-        alink.href = fileURL;
-        alink.download = 'keywords.csv';
-        alink.click();
-    }
-
     useEffect(() => {
         if (!isMobile) {
             setMargin(200);
