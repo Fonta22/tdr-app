@@ -23,7 +23,7 @@ const Apod = () => {
     const location = useLocation();
 
     const downloadImage = async (imageSrc) => {
-        const image = await fetch(imageSrc)
+        const image = await fetch(imageSrc, {mode:'cors'})
         const imageBlog = await image.blob()
         const imageURL = URL.createObjectURL(imageBlog)
 
@@ -75,7 +75,7 @@ const Apod = () => {
                     : <ReactPlayer className="apod-picture" url={state.url} />
                 }
                 {
-                    isImage ? <p><a onClick={() => downloadImage(state.hdurl)} className="btn btn-outline-primary">Download HD</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
+                    isImage ? <p><a href={state.hdurl} onClick={() => {/*downloadImage(state.hdurl)*/}} className="btn btn-outline-primary">Download HD</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
                     : isYouTube ? <p><a href={state.url} className="btn btn-outline-danger"><i class="bi bi-youtube" />&nbsp;&nbsp;View in YouTube</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
                     : <p><a href={state.url} className="btn btn-outline-info"><i class="bi bi-vimeo" />&nbsp;&nbsp;View in Vimeo</a>&nbsp;&nbsp;&nbsp; {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}</p>
                 }
