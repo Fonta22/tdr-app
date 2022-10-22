@@ -1,27 +1,27 @@
 Word,Definition
 .env,Fitxer de variables d'entorn.
 .gitignore,Llista de fitxers ignorats per Git.
-API,Application Programming interfaces. En català Interfície de Programació d’Aplicacions.
+API,Application Programming interfaces. En català Interfície de Programació d'Aplicacions.
 API Key,Clau per a fer requests a una API
 Array,Tipus de variable. Té una estructura de llista.
-Arxiu,Depenent del context es pot tractar d’una base de dades o d’un fitxer amb codi o text.
+Arxiu,Depenent del context es pot tractar d'una base de dades o d'un fitxer amb codi o text.
 Await,Keyword utilitzat per a pausar un programa JavaScript quan es necessita esperar un procés que tarda un cert temps a retornar un valor. Aquest keyword sols pot ser utilitzat dins d’una funció assincrònica (async function).
-Backend,"Part de la pàgina web en la que s’executa la lògica. No és visible, sinó que s’executa en el rerefons de l’aplicació."
+Backend,"Part de la pàgina web en la que s'executa la lògica. No és visible, sinó que s'executa en el rerefons de l'aplicació."
 Booleà,Tipus de variable. Només pot tenir un valor vertader o fals.
-Bot,Usuari d’una plataforma no humà programat per a fer una sèrie de funcions.
+Bot,Usuari d'una plataforma no humà programat per a fer una sèrie de funcions.
 Copyright,Un tipus de propietat intel·lectual que garanteix al propietari el dret exclusiu de copiar o distribuir la seva obra.
 CSS,Cascading Style Sheets
-Dashboard,Tauler on es pot visualitzar l’estat d’algun procés.
+Dashboard,Tauler on es pot visualitzar l'estat d'algun procés.
 Deploy,Desplegar o publicar una pàgina web.
-DOM (HTML),"Sigles de Document Object Model, és l’estructura del document HTML."
-Feed,Posts d’una xarxa social estructurats en forma de “paret”.
+DOM (HTML),"Sigles de Document Object Model, és l'estructura del document HTML."
+Feed,Posts d'una xarxa social estructurats en forma de “paret”.
 Fetch,"En anglès significa “recuperar”, per tant en el context de la programació representa la recuperació de dades."
 Framework,Entorn de treball per a programació. Facilita el treball gràcies a múltiples eines i utilitats.
-Frontend,"La part de la pàgina web visible per a l’usuari, és a dir la interfície."
-Funció,"Subrutina dins d’una rutina de programació. Pot ser executada varis cops, i retornar valors."
+Frontend,"La part de la pàgina web visible per a l'usuari, és a dir la interfície."
+Funció,"Subrutina dins d'una rutina de programació. Pot ser executada varis cops, i retornar valors."
 Funció assincrònica (async),"Funció que permet usar el keyword “async”, i per tant realitzar tasques assincròniques."
-Git,"Programari de sistema de control de versions."
-Hash,"Text encriptat usant un sistema d’encriptació. Els sistemes d’encriptació més utilitzats actualment són MD5 i SHA-1, però n’hi ha molts."
+Git,"Programari de sistema de control de versions."
+Hash,"Text encriptat usant un sistema d'encriptació. Els sistemes d'encriptació més utilitzats actualment són MD5 i SHA-1, però n'hi ha molts."
 HD,"High Definition. Per exemple en una imatge, seria una imatge en alta qualitat."
 Hosting,Allotjar públicament una web.
 HTML,Hyper Text Markup Language
@@ -30,32 +30,32 @@ Issue,Propostes de canvis en un projecte o repositori.
 JavaScript,Llenguatge de programació molt utilitzat per al desenvolupament web.
 JSX,Variant de JavaScript desenvolupada per a React. Permet usar i modificar elements HTML dins del codi JavaScript.
 Keyword,Paraula clau
-Link,"En català es pot traduir a un enllaç. Quan l’usuari prem un text enllaçat, aquest és redirigit a una altra pàgina web o document."
-Llenguatge de programació,"Sintaxi utilitzada per a codificar un programa. N’hi ha molts, i alguns són compatibles entre ells. Ex: JavaScript, Python, Visual Basic, etc."
-Llibreria,Funcions públiques que poden ser utilitzades per a optimitzar o facilitar el treball en el procés d’elaborar un programa. Poden ser importades gràcies a un instal·lador de paquets o manualment.
+Link,"En català es pot traduir a un enllaç. Quan l'usuari prem un text enllaçat, aquest és redirigit a una altra pàgina web o document."
+Llenguatge de programació,"Sintaxi utilitzada per a codificar un programa. N'hi ha molts, i alguns són compatibles entre ells. Ex: JavaScript, Python, Visual Basic, etc."
+Llibreria,Funcions públiques que poden ser utilitzades per a optimitzar o facilitar el treball en el procés d'elaborar un programa. Poden ser importades gràcies a un instal·lador de paquets o manualment.
 Map,Mètode de JavaScript que permet recorre un array seleccionant-ne cada element.
 Mapejar,Realitzar un map a un array.
-Markdown,"Llenguatge de marcat lleuger, que seguint un format concret permet escriure documents. És molt utilitzat per a la documentació d’aplicacions de programació."
+Markdown,"Llenguatge de marcat lleuger, que seguint un format concret permet escriure documents. És molt utilitzat per a la documentació d'aplicacions de programació."
 Microsoft Paint,"Programa natiu de Windows, desenvolupat per Microsoft. Permet fer dibuixos simples en ordinador i exportar-los en format PNG."
-Mètode,Funció d’una classe o objecte JavaScript.
-Mòdul,"Funció importada des d’una llibreria, o una funció exportada des d’una llibreria."
+Mètode,Funció d'una classe o objecte JavaScript.
+Mòdul,"Funció importada des d'una llibreria, o una funció exportada des d'una llibreria."
 Open Source,"És un projecte de codi obert, per tant tothom pot contribuir a millorar-lo."
-Paràmetres URL,Paràmetres especificats en l’URL d’una pàgina web.
-PHP,"Hypertext Pre-Processor. És un llenguatge de programació que era molt usat, en l’actualitat segueix siguent molt important, però no s’utilitza tant degut a [EEEE?]."
+Paràmetres URL,Paràmetres especificats en l'URL d'una pàgina web.
+PHP,"Hypertext Pre-Processor. És un llenguatge de programació que era molt usat, en l'actualitat segueix siguent molt important, però no s'utilitza tant degut a [EEEE?]."
 Public Domain,"Domini públic. Patrimoni intel·lectual sense copyright, és a dir, de lliure ús."
 Pull Request,Sol·licitud de canvis en un repositori Open Source. Aquest és el sistema amb el qual la gent pot contribuir a repositoris Open Source.
 Python,"Llenguatge de programació molt utilitzat actualment degut a que té llibreries de molts àmbits, i té una sintaxi simple i relativament fàcil de comprendre."
-Redirecció,Canvi experimentat per l’usuari des d’una URL a una altra.
+Redirecció,Canvi experimentat per l'usuari des d'una URL a una altra.
 Release,Significa llançament. En el context de la programació es tracta de quan un software publica una nova versió.
-Renderitzar,Representar gràficament una imatge 2D o 3D. En el context d’aquest TdR és quan els elements HTML són representats gràficament.
+Renderitzar,Representar gràficament una imatge 2D o 3D. En el context d'aquest TdR és quan els elements HTML són representats gràficament.
 Repositori,Projecte inicialitzat amb el sistema de control de versions git.
 Request,Sol·licitud de dades a una API o servei.
-Response,"Dades retornades d’una API o servei."
-Script,"Seqüència d’instruccions. Pot ser programada en qualsevol llenguatge de programació (Python, JavaScript, Bash, etc.)."
+Response,"Dades retornades d'una API o servei."
+Script,"Seqüència d'instruccions. Pot ser programada en qualsevol llenguatge de programació (Python, JavaScript, Bash, etc.)."
 Software,Programari
 Sol (Mart),"És un dia al planeta Mart. Equival a 24 hores, 39 minuts i 35.244 segons."
 String,"Tipus de variable. Es tracta d'una cadena de caràcters, per exemple podria ser un text."
 URL,Uniform Resource Locator. És la adreça electrònica que se li associa a un recurs web.
-Variable,"És on s’emmagatzemen les dades en un programa. N’hi ha de molts tipus, com per exemple cadenes de text, llistes, valors numèrics, booleans, etc."
-Variable d'entorn,"Variables, normalment ocultes, on s’hi emmagatzemen claus o paràmetres de configuració."
-Variable global,Variable accessible des de qualsevol part d’un script.
+Variable,"És on s'emmagatzemen les dades en un programa. N'hi ha de molts tipus, com per exemple cadenes de text, llistes, valors numèrics, booleans, etc."
+Variable d'entorn,"Variables, normalment ocultes, on s'hi emmagatzemen claus o paràmetres de configuració."
+Variable global,Variable accessible des de qualsevol part d'un script.
