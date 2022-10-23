@@ -72,6 +72,15 @@ const About = () => {
                                         </button>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Glossary</td>
+                                    <td>Catalan</td>
+                                    <td>
+                                        <a type="button" href="https://github.com/Fonta22/tdr-app/blob/main/public/documents/Glossary.csv" class="btn btn-outline-dark">
+                                            <i className="bi bi-github" />&nbsp;&nbsp;View CSV
+                                        </a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </center>
@@ -108,6 +117,17 @@ const About = () => {
                                         <button type="button" onClick={() => downloadFile('Glossary.csv')} class="btn btn-outline-success">
                                             <i className="bi bi-file-earmark-spreadsheet-fill" />&nbsp;&nbsp;Download
                                         </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Glossary</td>
+                                    <td>22/10/2022</td>
+                                    <td>Catalan</td>
+                                    <td>CSV</td>
+                                    <td>
+                                        <a type="button" href="https://github.com/Fonta22/tdr-app/blob/main/public/documents/Glossary.csv" class="btn btn-outline-dark">
+                                            <i className="bi bi-github" />&nbsp;&nbsp;View
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
