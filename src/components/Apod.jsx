@@ -16,6 +16,8 @@ const Apod = () => {
     const [state, setState] = useState([]);
     const [isImage, setIsImage] = useState([]);
     const [isYouTube, setIsYouTube] = useState([]);
+    const [isVimeo, setIsVimeo] = useState([]);
+    const [isWebsite, setIsWebsite] = useState([]);
     const [imgStyle, setImgStyle] = useState({});
 
     const API_KEY = process.env.REACT_APP_API_KEY;
@@ -54,7 +56,15 @@ const Apod = () => {
             else {
                 setIsImage(false);
                 if (data.media_type === 'video' && data.url.startsWith('https://www.youtube.com/')) setIsYouTube(true);
-                else setIsYouTube(false);
+                else {
+                    setIsYouTube(false);
+                    if (data.media_type === 'video' && data.url.startsWith('https://vimeo.com/')) setIsVimeo(true);
+                    else {
+                        setIsVimeo(false);
+                        if (data.media_type === 'other') setIsWebsite(false);
+                        else setIsWebsite(true);
+                    }
+                }
             }
 
             if (isMobile) {
@@ -73,8 +83,14 @@ const Apod = () => {
                 {
                     isImage ? 
                     <img className="apod-picture" src={state.url} alt={state.title} style={imgStyle} />
-                    :
+                    : isYouTube ?
                     <ReactPlayer className="apod-picture" url={state.url} />
+                    : isVimeo ?
+                    <ReactPlayer className="apod-picture" url={state.url} />
+                    : isWebsite ?
+                    <p><code>{state.url}</code></p>
+                    :
+                    <p></p>
                 }
                 {
                     isImage ?
@@ -87,11 +103,18 @@ const Apod = () => {
                         <a href={state.url} className="btn btn-outline-danger"><i class="bi bi-youtube" />&nbsp;&nbsp;View in YouTube</a>&nbsp;&nbsp;&nbsp;
                         {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}
                     </p>
-                    :
+                    : isVimeo ?
                     <p>
                         <a href={state.url} className="btn btn-outline-info"><i class="bi bi-vimeo" />&nbsp;&nbsp;View in Vimeo</a>&nbsp;&nbsp;&nbsp;
                         {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}
                     </p>
+                    : isWebsite ?
+                    <p>
+                        <a href={state.url} className="btn btn-outline-primary"><i class="bi bi-globe2"></i>&nbsp;&nbsp;View webpage</a>&nbsp;&nbsp;&nbsp;
+                        {state.copyright ? '© ' + state.copyright : <i>Public Domain</i>} {new Date().getFullYear()}
+                    </p>
+                    :
+                    <p></p>
                 }
                 <br />
             </center>

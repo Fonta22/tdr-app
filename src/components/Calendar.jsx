@@ -9,6 +9,8 @@ import { useLocation } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 
 import Rolling from '../img/Rolling.svg';
+import Globe from '../img/Globe.svg';
+import Quote from '../img/Quote.svg'
 
 const Calendar = () => {
     const [images, setImages] = useState([]);
@@ -86,8 +88,11 @@ const Calendar = () => {
                 const dateArr = [];
 
                 data.map(e => {
+                    console.log(e.url);
                     if (e.media_type === 'image') imageArr.push(e.url);
+                    else if (e.media_type === 'other') imageArr.push(Quote); // NO IMAGE!!
                     else if (e.media_type === 'video' && e.url.startsWith('https://www.youtube.com/')) imageArr.push(getThumbnail(e.url));
+                    else imageArr.push(Globe); // is website
 
                     dateArr.push(e.date);
                 });
@@ -100,6 +105,8 @@ const Calendar = () => {
                 setDates(dateArr);
                 setStatus('');
                 setSelected(month);
+                console.log(imageArr);
+                console.log(dateArr);
                 console.log('selected: ' + month);
             } catch (err) {
                 setStatus(<code>{err.code}</code>);
