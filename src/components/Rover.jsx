@@ -112,7 +112,7 @@ const Rover = () => {
                     <tbody>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={FHAZ} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> FHAZ</b>
@@ -121,7 +121,7 @@ const Rover = () => {
                                 </div>
                             </td>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={RHAZ} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> RHAZ</b>
@@ -130,7 +130,7 @@ const Rover = () => {
                                 </div>
                             </td>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={MAST} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> MAST</b>
@@ -141,7 +141,7 @@ const Rover = () => {
                         </tr>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={CHEMCAM} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> CHEMCAM</b>
@@ -150,7 +150,7 @@ const Rover = () => {
                                 </div>
                             </td>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={MAHLI} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> MAHLI</b>
@@ -159,7 +159,7 @@ const Rover = () => {
                                 </div>
                             </td>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={MARDI} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> MARDI</b>
@@ -171,7 +171,7 @@ const Rover = () => {
                         <tr>
                             <td />
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={NAVCAM} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> NAVCAM</b>
@@ -212,7 +212,7 @@ const Rover = () => {
                     <tbody>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={FHAZ} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> FHAZ</b>
@@ -223,7 +223,7 @@ const Rover = () => {
                         </tr>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={RHAZ} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> RHAZ</b>
@@ -234,7 +234,7 @@ const Rover = () => {
                         </tr>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={MAST} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> MAST</b>
@@ -245,7 +245,7 @@ const Rover = () => {
                         </tr>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={CHEMCAM} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> CHEMCAM</b>
@@ -256,7 +256,7 @@ const Rover = () => {
                         </tr>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={MAHLI} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> MAHLI</b>
@@ -267,7 +267,7 @@ const Rover = () => {
                         </tr>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={MARDI} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> MARDI</b>
@@ -278,7 +278,7 @@ const Rover = () => {
                         </tr>
                         <tr>
                             <td>
-                                <div className="card" >
+                                <div className="card shadow">
                                     <img className="card-img-top" id="rover-cam-img" src={NAVCAM} alt="Card image cap" />
                                     <div className="card-body">
                                         <b className="card-text"><i className="bi bi-camera-fill"></i> NAVCAM</b>
