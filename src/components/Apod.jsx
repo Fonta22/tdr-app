@@ -46,8 +46,12 @@ const Apod = () => {
 
             const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`); // date=YYYY-MM-DD
             const data = await res.data;
+            
             data.date = formatDate(data.date);
+            
+            data.explanation = data.explanation.replaceAll('--', '—');
             data.explanation_cat = await translateText(data.explanation);
+            
             setState(data);
 
             console.log(data.media_type);
